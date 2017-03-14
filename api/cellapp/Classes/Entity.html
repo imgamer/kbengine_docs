@@ -58,6 +58,12 @@
 <span class="function_list">def <a href="#destroySpace" class="function_list" >destroySpace</a>( self ):</span>
 </td></tr>
 
+<tr>
+  <td>def <a href="#directionLocalToWorld" class="function_list" >directionLocalToWorld</a>( self, localDir ):</td>
+</tr>
+<tr>
+  <td>def <a href="#directionWorldToLocal" class="function_list" >directionWorldToLocal</a>( self, worldDir ):</td>
+</tr>
 <tr><td>
 <span class="function_list">def <a href="#entitiesInAOI" class="function_list" >entitiesInAOI</a>( self ):</span>
 </td></tr>
@@ -98,10 +104,22 @@
 <span class="function_list">def <a href="#navigatePathPoints" class="function_list" >navigatePathPoints</a>( self,  destination, maxSearchDistance, layer ):</span>
 </td></tr>
 
+<tr>
+  <td>def <a href="#positionLocalToWorld" class="function_list" >positionLocalToWorld</a>( self, localPos ):</td>
+</tr>
+<tr>
+  <td>def <a href="#positionWorldToLocal" class="function_list" >positionWorldToLocal</a>( self, worldPos ):</td>
+</tr>
 <tr><td>
 <span class="function_list">def <a href="#setAoiRadius" class="function_list" >setAoiRadius</a>( self, radius, hyst=5 ):</span>
 </td></tr>
 
+<tr>
+  <td>def <a href="#setDirectionForOthers" class="function_list" >setDirectionForOthers</a>( self, direction ):</td>
+</tr>
+<tr>
+  <td>def <a href="#setPositionForOthers" class="function_list" >setPositionForOthers</a>( self, position ):</td>
+</tr>
 <tr><td>
 <span class="function_list">def <a href="#teleport" class="function_list" >teleport</a>( self, nearbyMBRef, position, direction ):</span>
 </td></tr>
@@ -132,6 +150,10 @@
 <span class="function_list">def <a href="#onGetWitness" class="function_list" >onGetWitness</a>( self ):</span>
 </td></tr>
 
+<tr>
+  <td>def <a href="#onGotParent" class="function_list" >onGotParent</a>( self ):</td>
+</tr>
+
 <tr><td>
 <span class="function_list">def <a href="#onLeaveTrap" class="function_list" >onLeaveTrap</a>( self, entity, rangeXZ, rangeY, controllerID, userArg ):</span>
 </td></tr>
@@ -140,6 +162,9 @@
 <span class="function_list">def <a href="#onLoseControlledBy" class="function_list" >onLoseControlledBy</a>( self, id ):</span>
 </td></tr>
 
+<tr>
+  <td>def <a href="#onLoseParent" class="function_list" >onLoseParent</a>( self, entity ):</td>
+</tr>
 <tr><td>
 <span class="function_list">def <a href="#onLoseWitness" class="function_list" >onLoseWitness</a>( self ):</span>
 </td></tr>
@@ -226,9 +251,21 @@
 <tr valign=top><td><a href="#layer" class="attribute_list" >layer</a></td><td>&nbsp; int8
 </td></tr>
 
+<tr valign=top>
+  <td><a href="#localDirection" class="attribute_list" >localDirection</a></td>
+  <td><a href=../../keywords.html#vector3>&nbsp; Vector3</a>；读写</td>
+</tr>
+<tr valign=top>
+  <td><a href="#localPosition" class="attribute_list" >localPosition</a></td>
+  <td><a href=../../keywords.html#vector3>&nbsp; Vector3</a>；读写</td>
+</tr>
 <tr valign=top><td><a href="#otherClients" class="attribute_list" >otherClients</a></td><td>&nbsp; 只读 PyClient
 </td></tr>
 
+<tr valign=top>
+  <td><a href="#parent" class="attribute_list" >parent</a></td>
+  <td>&nbsp; Entity；读写</td>
+</tr>
 <tr valign=top><td><a href="#position" class="attribute_list" >position</a></td><td>&nbsp; <a href=../../keywords.html#vector3>Vector3</a>
 </td></tr>
 
@@ -616,13 +653,51 @@ integer，它指定要移除的定时器id。
 销毁这个实体所在的<a href=../../keywords.html#cn_Space>空间</a>。
 </div>
 
+<a name="directionLocalToWorld"></a>
+<p class="function_definition"> def directionLocalToWorld( <i>self, localDir</i> ): </p>
+<div class="function_description"> <b>功能说明：</b><br>
+  <br>
+  向目标实体传入相对于它的本地朝向，转換为世界朝向。</div>
+<p> <span class="function_parameter">参数：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>localDir</i></span></td>
+    <td><span class="function_parameter_description"> <a href=../../keywords.html#vector3>Vector3</a>；相对于目标实体的本地朝向 </span></td>
+  </tr>
+</table>
+</p>
+<p> <span class="function_return">返回：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr>
+    <td> <span class="function_parameter_description"><a href=../../keywords.html#vector3>Vector3</a></span>；世界朝向。 </td>
+  </tr>
+</table>
+<a name="directionWorldToLocal"></a>
+<p class="function_definition"> def directionWorldToLocal( <i>self, worldDir</i> ): </p>
+<div class="function_description"> <b>功能说明：</b><br>
+  <br>
+  向目标实体传入世界朝向，转換为相对于该目标实体的本地朝向。</div>
+<p> <span class="function_parameter">参数：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>worldDir</i></span></td>
+    <td><span class="function_parameter_description"> <a href=../../keywords.html#vector3>Vector3</a>；世界朝向 </span></td>
+  </tr>
+</table>
+</p>
+<p> <span class="function_return">返回：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr>
+    <td><span class="function_parameter_description"><a href=../../keywords.html#vector3>Vector3</a></span>；相对于目标实体的本地朝向。 </td>
+  </tr>
+</table>
 <a name="entitiesInAOI"></a><p class="function_definition">
 <span class="function_definition">def entitiesInAOI( <i>self</i> ):</span>
 </p>
 
 <div class="function_description">
 <b>功能说明：</b><br><br>
-获得这个实体的<a href=../../keywords.html#AOI>AOI</a>范围内的实体列表。
+获得这个实体的<a href=../../keywords.html#AOI>AOI</a>范围内的实体列表。</div>
 
 <a name="entitiesInRange"></a><p class="function_definition">
 <span class="function_definition">def entitiesInRange( <i>self, range, entityType=None, position=None</i> ):</span>
@@ -916,7 +991,7 @@ tuple，包含一个或者多个坐标的数组。
 
 
 <a name="navigate"></a><p class="function_definition">
-<span class="function_definition">def navigate( <i>self, destination, velocity, distance, maxMoveDistance, maxSearchDistance, faceMovement, layer, userData</i> ):</span>
+<span class="function_definition">def navigate( <i>self, destination, velocity, distance, maxMoveDistance, maxSearchDistance, faceMovement, layer, flags, userData</i> ):</span>
 </p>
 
 <div class="function_description">
@@ -978,6 +1053,12 @@ bool，如果实体面向移动方向则为true（默认）。如果是其它机制则为false。
 int8，使用某个层的navmesh来寻路。
 </span></td></tr>
 
+<tr valign=top>
+  <td><span class="function_parameter_name"><i>flags</i></span></td>
+  <td><span class="function_parameter_description">
+uint16，用于recastnavigation的多区域划分功能，表示可以移动的标志位（全部可以移动：0xffff）。
+</span></td></tr>
+
 <tr valign=top><td><span class="function_parameter_name"><i>userData</i></span></td><td><span class="function_parameter_description">
 object，传给通知函数的数据。
 </span></td></tr>
@@ -998,7 +1079,7 @@ int，新创建的控制器ID。
 
 
 <a name="navigatePathPoints"></a><p class="function_definition">
-<span class="function_definition">def navigatePathPoints( <i>self, destination, maxSearchDistance, layer</i> ):</span>
+<span class="function_definition">def navigatePathPoints( <i>self, destination, maxSearchDistance, layer, flags</i> ):</span>
 </p>
 
 <div class="function_description">
@@ -1022,7 +1103,50 @@ float，最大的搜索距离
 <tr valign=top><td><span class="function_parameter_name"><i>layer</i></span></td><td><span class="function_parameter_description">
 int8，使用某个层的navmesh来查找路径列表。
 </span></td></tr>
+<tr valign=top>
+  <td><span class="function_parameter_name"><i>flags</i></span></td>
+  <td><span class="function_parameter_description">
+uint16，用于recastnavigation的多区域划分功能，表示可以移动的标志位（全部可以移动：0xffff）。
+</span></td></tr>
 
+</table>
+<a name="positionLocalToWorld"></a>
+<p class="function_definition"> def positionLocalToWorld( <i>self, localPos</i> ): </p>
+<div class="function_description"> <b>功能说明：</b><br>
+  <br>
+  向目标实体传入相对于它的本地坐标，转換为世界坐标。</div>
+<p> <span class="function_parameter">参数：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>localPos</i></span></td>
+    <td><span class="function_parameter_description"> <a href=../../keywords.html#vector3>Vector3</a>；相对于目标实体的本地坐标 </span></td>
+  </tr>
+</table>
+</p>
+<p> <span class="function_return">返回：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr>
+    <td><span class="function_parameter_description"><a href=../../keywords.html#vector3>Vector3</a></span>；世界坐标。 </td>
+  </tr>
+</table>
+<a name="positionWorldToLocal"></a>
+<p class="function_definition"> def positionWorldToLocal( <i>self, worldPos</i> ): </p>
+<div class="function_description"> <b>功能说明：</b><br>
+  <br>
+  向目标实体传入世界坐标，转換为相对于该目标实体的本地坐标。</div>
+<p> <span class="function_parameter">参数：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>worldPos</i></span></td>
+    <td><span class="function_parameter_description"> <a href=../../keywords.html#vector3>Vector3</a>；世界坐标 </span></td>
+  </tr>
+</table>
+</p>
+<p> <span class="function_return">返回：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr>
+    <td><span class="function_parameter_description"><a href=../../keywords.html#vector3>Vector3</a></span>；相对于目标实体的本地坐标。 </td>
+  </tr>
 </table>
 </p>
 
@@ -1069,6 +1193,52 @@ None
 </td></tr>
 </table>
 </p>
+<a name="setDirectionForOthers"></a>
+<p class="function_definition"> def setDirectionForOthers( <i>self, direction</i> ): </p>
+<div class="function_description"> <b>功能说明：</b><br>
+  <br>
+  一个特殊的方法：强制设置自己的direction，但不通知自己的客户端，
+当我们希望手动同步客户端的坐标给周围的客户端时，<br>
+可以使用这个方法来代替self.direction = pos的模式，以避免通知自己的客户端<br>
+  <br>
+这个函数只能在<a href=../../keywords.html#real>real</a>的实体上被调用。 </div>
+<p> <span class="function_parameter">参数：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>direction</i></span></td>
+    <td><span class="function_parameter_description"> <a href=../../keywords.html#entity>Entity</a>修改后的朝向，是一个由3个float组成的序列(roll,pitch, yaw)。 </span></td>
+  </tr>
+</table>
+<p> <span class="function_return">返回：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr>
+    <td> None </td>
+  </tr>
+</table>
+</p>
+<a name="setPositionForOthers"></a>
+<p class="function_definition"> def setPositionForOthers( <i>self, position</i> ): </p>
+<div class="function_description"> <b>功能说明：</b><br>
+  <br>
+  一个特殊的方法：强制设置自己的position，但不通知自己的客户端，
+当我们希望手动同步客户端的坐标给周围的客户端时，<br>
+可以使用这个方法来代替self.position = pos的模式，以避免通知自己的客户端<br>
+  <br>
+这个函数只能在<a href=../../keywords.html#real>real</a>的实体上被调用。 </div>
+<p> <span class="function_parameter">参数：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>position</i></span></td>
+    <td><span class="function_parameter_description"> <a href=../../keywords.html#entity>Entity</a>修改后的坐标，是一个有3个float(x, y, z)组成的序列。 </span></td>
+  </tr>
+</table>
+</p>
+<p> <span class="function_return">返回：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr>
+    <td> None </td>
+  </tr>
+</table>
 
 <a name="teleport"></a><p class="function_definition">
 <span class="function_definition">def teleport( <i>self, nearbyMBRef, position, direction</i> ):</span>
@@ -1214,6 +1384,13 @@ float，给定触发器y轴高度，必须大于等于0。<br>
 
 </div>
 
+</p>
+</p>
+<a name="onGotParent"></a>
+<p class="function_definition"> def onGotParent( <i>self</i> ): </p>
+<div class="function_description">如果这个函数在脚本中有实现，当<a href=../../keywords.html#entity>Entity</a>.<a href=#parent >parent </a>所关联了新的父对象实体时该回调方法被调用。<br>
+  这时我们可以通过访问<a href=../../keywords.html#entity>Entity</a>.<a href=#parent >parent</a>属性来获得父对象实体。<br>
+</div>
 <a name="onLeaveTrap"></a><p class="function_definition">
 <span class="function_definition">def onLeaveTrap( <i>self, entity, rangeXZ, rangeY, controllerID, userArg</i> ):</span>
 </p>
@@ -1255,7 +1432,7 @@ float，给定触发器y轴高度，必须大于等于0。<br>
 <span class="function_definition">def onLoseControlledBy( <i>self, id</i> ):</span>
 </p>
 
-<div class="function_description">如果这个函数在脚本中有实现，当<a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#controlledBy >controlledBy </a>所关联的实体丢失时改回调方法被调用。<br>
+<div class="function_description">如果这个函数在脚本中有实现，当<a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#controlledBy >controlledBy </a>所关联的实体丢失时该回调方法被调用。<br>
 </div>
 
 <p>
@@ -1267,6 +1444,18 @@ float，给定触发器y轴高度，必须大于等于0。<br>
 
 </table>
 </p>
+</p>
+<a name="onLoseParent"></a>
+<p class="function_definition"> def onLoseParent( <i>self, entity</i> ): </p>
+<div class="function_description">如果这个函数在脚本中有实现，当<a href=../../keywords.html#entity>Entity</a>.<a href=#parent >parent </a>所关联的实体丢失时该回调方法被调用。<br>
+</div>
+<p> <span class="function_parameter">参数：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>entity</i></span></td>
+    <td><span class="function_parameter_description">&nbsp;曾经的父对象实例。 </span></td>
+  </tr>
+</table>
 
 
 
@@ -1710,9 +1899,39 @@ self.direction.z = 1.0
 </td></tr>
 </table>
 </p>
+</p>
+<a name="localDirection"></a>
+<p class="attribute_definition"> localDirection </p>
+<div class="attribute_description">获取或设置entity的本地朝向。<br>
+  当entity.parent的值不为None时，entity.localDirection的值是相对于其父entity的偏移值，设置时也应该以相对于其父entity的朝向来设置相应的偏移值。<br>
+  当entity.parent的值等于None时，entity.localDirection的值与entity.direction的值完全相等，设置时也应该以世界朝向来设置&mdash;&mdash;我们更建议使用entity.direction来设置entity的世界朝向。<br>
+  <br>
+  参考：<br>
+<a href=#parent>Entity.parent</a> </div>
+<p> <span class="attribute_type">类型：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr>
+    <td><a href=../../keywords.html#vector3>Vector3</a>；读写</td>
+  </tr>
+</table>
 
 
 
+</p>
+<a name="localPosition"></a>
+<p class="attribute_definition"> localPosition </p>
+<div class="attribute_description">获取或设置entity的本地坐标。<br>
+当entity.parent的值不为None时，entity.localPosition的值是相对于其父entity的偏移值，设置时也应该以相对于其父entity的位置来设置相应的偏移值。<br>
+当entity.parent的值等于None时，entity.localPosition的值与entity.position的值完全相等，设置时也应该以世界朝向来设置&mdash;&mdash;我们更建议使用entity.direction来设置entity的世界坐标。<br>
+  <br>
+  参考：<br>
+<a href=#parent>Entity.parent</a></div>
+<p> <span class="attribute_type">类型：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr>
+    <td><a href=../../keywords.html#vector3>Vector3</a>；读写</td>
+  </tr>
+</table>
 <a name="otherClients"></a><p class="attribute_definition">
 <span class="attribute_definition">otherClients</span>
 </p>
@@ -1749,6 +1968,22 @@ avatar.otherClients.attack(monsterID，skillID, damage)<br><br>
 </table>
 </p>
 
+</p>
+<a name="parent"></a>
+<p class="attribute_definition"> parent </p>
+<div class="attribute_description">
+  <p>设置或获取当前entity的父对象（entity）。<br>
+    当一个entity设置了有效的父entity，其位置和朝向会随着父entity的位置或朝向的改变而进行相应的改变。<br> 
+    这个功能通常用来实现类似于交通工具这样的功能。<br>
+    例如：人进入了卡车中，如果想让人自动跟随卡车一起移动，则可以把人的父entity设置为卡车。</p>
+  <p>当要取消这种父子的关系时，只要设置此属性的值为None即可。</p>
+</div>
+<p> <span class="attribute_type">Type:</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr>
+    <td>Entity，可读写</td>
+  </tr>
+</table>
 <a name="position"></a><p class="attribute_definition">
 <span class="attribute_definition">position</span>
 </p>
