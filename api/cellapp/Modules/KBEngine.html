@@ -98,8 +98,17 @@
 <span class="function_list">def <a href="#listPathRes" class="function_list" >listPathRes</a>( path, extension ):</span>
 </td></tr>
 
+<tr>
+  <td><span class="function_list">def <a href="#loadGeometryMapping" class="function_list" >loadGeometryMapping</a>( mapper, path, shouldLoadOnServer, params ):</span>
+</td>
+</tr>
 <tr><td>
 <span class="function_list">def <a href="#matchPath" class="function_list" >matchPath</a>( res ):</span>
+</td></tr>
+
+<tr>
+  <td>
+<span class="function_list">def <a href="#navigatePathPoints" class="function_list" >navigatePathPoints</a>( path, position, destination, maxSearchDistance, layer, flags ):</span>
 </td></tr>
 
 <tr><td>
@@ -145,6 +154,10 @@
 
 <tr><td>
 <span class="function_list">def <a href="#onCellAppDataDel" class="function_list" >onCellAppDataDel</a>( key ):</span>
+</td></tr>
+
+<tr><td>
+<span class="function_list">def <a href="#onGeometryLoaded" class="function_list" >onGeometryLoaded</a>( path ):</span>
 </td></tr>
 
 <tr><td>
@@ -844,6 +857,38 @@ Tuple, 资源列表。
 </p>
 
 
+<a name="loadGeometryMapping"></a><p class="function_definition">
+<span class="function_definition">def loadGeometryMapping( <i> mapper, path, shouldLoadOnServer, params</i> ):</span>
+</p>
+
+<div class="function_description">
+<b>功能说明：</b><br><br>
+加载一个与空间（space）无关的几何映射（导航数据），函数调用之后在服务端会加载相应的几何体数据。<br>
+<br><br>
+在服务端上，从给定目录里加载所有的几何数据到指定的空间。这些数据可能被分成很多区块，不同区块是异步加载的，当所有的几何数据加载完成的时候，下面的回调方法会被调用：
+<pre>	def <a href=#onGeometryLoaded>onGeometryLoaded</a>( path ):
+</pre>
+<p>
+<span class="function_parameter">参数：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+
+<tr valign=top><td><span class="function_parameter_name"><i>mapper</i></span></td><td><span class="function_parameter_description">
+目前填None
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>path</i></span></td><td><span class="function_parameter_description">
+包含几何数据的目录路径
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>params</i></span></td><td><span class="function_parameter_description">
+可选的PyDict参数，指定不同layer所使用的navmesh，例如：<br>
+KBEngine.addSpaceGeometryMapping(self.spaceID, None, resPath, True, {0 : "srv_xinshoucun_1.navmesh", 1 : "srv_xinshoucun.navmesh"})
+</span></td></tr>
+
+</table>
+</p>
+
+
 
 <a name="matchPath"></a><p class="function_definition">
 <span class="function_definition">def matchPath( <i>res</i> ):</span>
@@ -881,7 +926,50 @@ string, 资源的绝对路径。
 </table>
 </p>
 
+<a name="navigatePathPoints"></a>
+<p class="function_definition"> def navigatePathPoints( <i>path, position, destination, maxSearchDistance, layer, flags</i> ): </p>
+<div class="function_description"> <b>功能说明：</b><br>
+  <br>
+  这个函数返回path参数指向的地图中从position点到destination点的导航路径点数据。 <br>
+  <br>
+</div>
+<p> <span class="function_parameter">参数：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>path</i></span></td>
+    <td><span class="function_parameter_description"> string，地图路径，与<a href=#loadGeometryMapping>loadGeometryMapping</a>()方法中的path参数对象</span></td>
+  </tr>
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>position</i></span></td>
+    <td><span class="function_parameter_description"> Vector3，导航的开始点</span></td>
+  </tr>
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>destination</i></span></td>
+    <td><span class="function_parameter_description"> Vector3，导航的目标点</span></td>
+  </tr>
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>maxSearchDistance</i></span></td>
+    <td><span class="function_parameter_description"> float，最大的搜索距离 </span></td>
+  </tr>
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>layer</i></span></td>
+    <td><span class="function_parameter_description"> int8，使用某个层的navmesh来查找路径列表。 </span></td>
+  </tr>
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>flags</i></span></td>
+    <td><span class="function_parameter_description"> uint16，用于recastnavigation的多区域划分功能，表示可以移动的标志位（全部可以移动：0xffff）。 </span></td>
+  </tr>
+</table>
+</p>
 
+
+<p><span class="function_return">返回：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr>
+    <td> ARRAY of Vector3,返回实际找到的导航路径点。 </td>
+  </tr>
+</table>
+</p>
 
 <a name="open"></a><p class="function_definition">
 <span class="function_definition">def open( <i>res, mode</i> ):</span>
@@ -1154,6 +1242,21 @@ KBEngine.cellAppData有删除的时候回调此函数。
 被删除数据的键。
 </span></td></tr>
 
+</table>
+</p>
+</table>
+</p>
+<a name="onGeometryLoaded"></a>
+<p class="function_definition"> def onGeometryLoaded( <i>path</i> ): </p>
+<div class="function_description"> <b>功能说明：</b><br>
+  <br>
+  当通过<a href=#loadGeometryMapping>loadGeometryMapping</a>()方法加载一个地图导航数据完成时，此方法被触发。</div>
+<p> <span class="function_parameter">参数：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+  <tr valign=top>
+    <td><span class="function_parameter_name"><i>path</i></span></td>
+    <td><span class="function_parameter_description"> 对应调用loadGeometryMapping()方法时的path参数，表示是哪个地图的导航数据加载完成了。 </span></td>
+  </tr>
 </table>
 </p>
 
