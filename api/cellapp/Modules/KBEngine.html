@@ -99,7 +99,7 @@
 </td></tr>
 
 <tr>
-  <td><span class="function_list">def <a href="#loadGeometryMapping" class="function_list" >loadGeometryMapping</a>( mapper, path, shouldLoadOnServer, params ):</span>
+  <td><span class="function_list">def <a href="#loadGeometryMapping" class="function_list" >loadGeometryMapping</a>( mapper, path,  params ):</span>
 </td>
 </tr>
 <tr><td>
@@ -857,8 +857,9 @@ Tuple, 资源列表。
 </p>
 
 
-<a name="loadGeometryMapping"></a><p class="function_definition">
-<span class="function_definition">def loadGeometryMapping( <i> mapper, path, shouldLoadOnServer, params</i> ):</span>
+<a name="loadGeometryMapping"></a>
+<p class="function_definition">
+<span class="function_definition">def loadGeometryMapping( <i> mapper, path,  params</i> ):</span>
 </p>
 
 <div class="function_description">
@@ -941,11 +942,11 @@ string, 资源的绝对路径。
   </tr>
   <tr valign=top>
     <td><span class="function_parameter_name"><i>position</i></span></td>
-    <td><span class="function_parameter_description"> Vector3，导航的开始点</span></td>
+    <td><span class="function_parameter_description"> Vector3，导航的开始点，这个点必须是相对于该地图路径的点</span></td>
   </tr>
   <tr valign=top>
     <td><span class="function_parameter_name"><i>destination</i></span></td>
-    <td><span class="function_parameter_description"> Vector3，导航的目标点</span></td>
+    <td><span class="function_parameter_description"> Vector3，导航的目标点，这个点必须是相对于该地图路径的点</span></td>
   </tr>
   <tr valign=top>
     <td><span class="function_parameter_name"><i>maxSearchDistance</i></span></td>
