@@ -39,6 +39,41 @@
 		<param name="Local" value="cellapp\Classes\Entity.html#canNavigate">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="__ACCOUNT_NAME__">
+		<param name="Name" value="Proxy - KBEngine base 文档">
+		<param name="Local" value="baseapp\Classes\Proxy.html#__ACCOUNT_NAME__">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="__ACCOUNT_PASSWORD__">
+		<param name="Name" value="Proxy - KBEngine base 文档">
+		<param name="Local" value="baseapp\Classes\Proxy.html#__ACCOUNT_PASSWORD__">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="clientAddr">
+		<param name="Name" value="Proxy - KBEngine base 文档">
+		<param name="Local" value="baseapp\Classes\Proxy.html#clientAddr">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="entitiesEnabled">
+		<param name="Name" value="Proxy - KBEngine base 文档">
+		<param name="Local" value="baseapp\Classes\Proxy.html#entitiesEnabled">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="hasClient">
+		<param name="Name" value="Proxy - KBEngine base 文档">
+		<param name="Local" value="baseapp\Classes\Proxy.html#hasClient">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="roundTripTime">
+		<param name="Name" value="Proxy - KBEngine base 文档">
+		<param name="Local" value="baseapp\Classes\Proxy.html#roundTripTime">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="timeSinceHeardFromClient">
+		<param name="Name" value="Proxy - KBEngine base 文档">
+		<param name="Local" value="baseapp\Classes\Proxy.html#timeSinceHeardFromClient">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="databaseInterfaceName">
 		<param name="Name" value="Base - KBEngine base 文档">
 		<param name="Local" value="baseapp\Classes\Base.html#databaseInterfaceName">
@@ -410,6 +445,9 @@
 		<param name="Name" value="isOnGround">
 		<param name="Name" value="Entity - KBEngine cell 文档">
 		<param name="Local" value="cellapp\Classes\Entity.html#isOnGround">
+		<param name="Name" value="KBEngine - Base Types">
+		<param name="Local" value="bots\Classes\Entity.html#isOnGround">
+		<param name="Local" value="client\Classes\Entity.html#isOnGround">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="isWitnessed">
@@ -1272,10 +1310,10 @@
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="onReadyForShutDown">
-		<param name="Local" value="logger\Modules\KBEngine.html#onReadyForShutDown">
 		<param name="Name" value="KBEngine - KBEngine base 文档">
-		<param name="Local" value="baseapp\Modules\KBEngine.html#onReadyForShutDown">
+		<param name="Local" value="logger\Modules\KBEngine.html#onReadyForShutDown">
 		<param name="Name" value="KBEngine - KBEngine baseapp 文档">
+		<param name="Local" value="baseapp\Modules\KBEngine.html#onReadyForShutDown">
 		<param name="Local" value="dbmgr\Modules\KBEngine.html#onReadyForShutDown">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
@@ -1287,8 +1325,8 @@
 		<param name="Local" value="loginapp\Modules\KBEngine.html#onLoginAppShutDown">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="onReuqestLogin">
-		<param name="Local" value="loginapp\Modules\KBEngine.html#onReuqestLogin">
+		<param name="Name" value="onRequestLogin">
+		<param name="Local" value="loginapp\Modules\KBEngine.html#onRequestLogin">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="onLoginCallbackFromDB">

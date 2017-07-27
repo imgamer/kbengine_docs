@@ -568,7 +568,7 @@ socket描述符/文件描述符。
   <br>
   rows参数则是&ldquo;影响的行数&rdquo;，它是一个整数，表示命令执行受影响的行数。这个参数只和不返回结果结合的命令（如DELETE）相关。<br>
   如果有结果集合返回或者命令执行有错误时这个参数为None。 </p>
-    <p class="function_parameter_description">insertid对应的是&ldquo;自増长值&rdquo;，当成功的向一张带有自増长类型字段的表中插入数据时，它返回该数据在插入时自増长字段所被赋于的值。<br>
+    <p class="function_parameter_description">insertid对应的是&ldquo;自増长值&rdquo;，类似于实体的databaseID，当成功的向一张带有自増长类型字段的表中插入数据时，它返回该数据在插入时自増长字段所被赋于的值。<br>
       更多的信息可以参阅mysql的mysql_insert_id()方法。另外，此参数仅在数据库类型为mysql时有意义。<br>
   <br>
   error则对应了&ldquo;错误信息&rdquo;，当命令执行有错误时，这个参数是一个描述错误的字符串。命令执行没有发生错误时这个参数为None。 </p></td></tr>
