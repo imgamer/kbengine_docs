@@ -43,7 +43,7 @@
 </td></tr>
 
 <tr><td>
-<span class="function_list">def <a href="#debugAOI" class="function_list" >debugAOI</a>( self ):</span>
+<span class="function_list">def <a href="#debugView" class="function_list" >debugView</a>( self ):</span>
 </td></tr>
 
 <tr><td>
@@ -65,7 +65,7 @@
   <td>def <a href="#directionWorldToLocal" class="function_list" >directionWorldToLocal</a>( self, worldDir ):</td>
 </tr>
 <tr><td>
-<span class="function_list">def <a href="#entitiesInAOI" class="function_list" >entitiesInAOI</a>( self ):</span>
+<span class="function_list">def <a href="#entitiesInView" class="function_list" >entitiesInView</a>( self ):</span>
 </td></tr>
 
 <tr><td>
@@ -85,11 +85,11 @@
 </td></tr>
 
 <tr><td>
-<span class="function_list">def <a href="#getAoiRadius" class="function_list" >getAoiRadius</a>( self ):</span>
+<span class="function_list">def <a href="#getViewRadius" class="function_list" >getViewRadius</a>( self ):</span>
 </td></tr>
 
 <tr><td>
-<span class="function_list">def <a href="#getAoiHystArea" class="function_list" >getAoiHystArea</a>( self ):</span>
+<span class="function_list">def <a href="#getViewHystArea" class="function_list" >getViewHystArea</a>( self ):</span>
 </td></tr>
 
 <tr><td>
@@ -113,7 +113,7 @@
   <td>def <a href="#positionWorldToLocal" class="function_list" >positionWorldToLocal</a>( self, worldPos ):</td>
 </tr>
 <tr><td>
-<span class="function_list">def <a href="#setAoiRadius" class="function_list" >setAoiRadius</a>( self, radius, hyst=5 ):</span>
+<span class="function_list">def <a href="#setViewRadius" class="function_list" >setViewRadius</a>( self, radius, hyst=5 ):</span>
 </td></tr>
 
 <tr>
@@ -144,7 +144,7 @@
 </td></tr>
 
 <tr><td>
-<span class="function_list">def <a href="#onEnteredAoI" class="function_list" >onEnteredAoI</a>( self, entity ):</span>
+<span class="function_list">def <a href="#onEnteredView" class="function_list" >onEnteredView</a>( self, entity ):</span>
 </td></tr>
 
 
@@ -235,13 +235,13 @@
 <tr valign=top><td><a href="#allClients" class="attribute_list" >allClients</a></td><td>&nbsp; Ö»¶Á PyClient
 </td></tr>
 
-<tr valign=top><td><a href="#base" class="attribute_list" >base</a></td><td>&nbsp; Ö»¶Á <a href=../../keywords.html#Mailbox>BaseEntityMailBox </a>
+<tr valign=top><td><a href="#base" class="attribute_list" >base</a></td><td>&nbsp; Ö»¶Á <a href=../../keywords.html#EntityCall>BaseEntityCall </a>
 </td></tr>
 
-<tr valign=top><td><a href="#client" class="attribute_list" >client</a></td><td>&nbsp; Ö»¶Á <a href=../../keywords.html#Mailbox>ClientEntityMailbox</a>
+<tr valign=top><td><a href="#client" class="attribute_list" >client</a></td><td>&nbsp; Ö»¶Á <a href=../../keywords.html#EntityCall>ClientEntityCall</a>
 </td></tr>
 
-<tr valign=top><td><a href="#controlledBy" class="attribute_list" >controlledBy</a></td><td>&nbsp; <a href=../../keywords.html#Mailbox>BaseEntityMailBox</a>
+<tr valign=top><td><a href="#controlledBy" class="attribute_list" >controlledBy</a></td><td>&nbsp; <a href=../../keywords.html#EntityCall>BaseEntityCall</a>
 </td></tr>
 
 <tr valign=top><td><a href="#className" class="attribute_list" >className</a></td><td>&nbsp; Ö»¶Á <a href="STRING.html">string</a>
@@ -308,18 +308,18 @@
 ¿ØÖÆÆ÷ÊÇ·Çpython¶ÔÏó£¬¿ÉÒÔÊÊÓÃÔÚcellÊµÌåÉÏËæ×ÅÊ±¼äµÄ¹ıÈ¥À´¸Ä±äËüÃÇµÄÎ»ÖÃÊı¾İ£¬ËüÃÇÍ¨¹ı³ÉÔ±º¯ÊıÈç"trackEntity"ºÍ"turnToYaw"À´
 Ìí¼Óµ½<a href=../../keywords.html#entity>Entity</a>£¬¿ÉÒÔÍ¨¹ı"cancelController"ÒÆ³ı¡£
 <br><br>
-¸ĞĞËÈ¤µÄ·¶Î§£¬»ò"AOI"¶ÔÓÚËùÓĞÊôÓÚ¿Í»§¶ËµÄ<a href="KBEngine.html">KBEngine</a>ÊµÌåÀ´ËµÊÇÒ»¸öÖØÒªµÄ¸ÅÄî¡£
-Ò»¸öÊµÌåµÄAOIÊÇÎ§ÈÆÕâ¸öÊµÌåµÄ¿Í»§¶Ë£¨Èç¹ûËüÓĞ£©ËùÄÜ¸ĞÖªµÄÇøÓò¡£ÕâÓÃÓÚÑ¡Ôñ·¢¸ø¿Í»§¶ËµÄÊı¾İÁ¿¡£AOIµÄÊµ¼Ê
+¸ĞĞËÈ¤µÄ·¶Î§£¬»ò"View"¶ÔÓÚËùÓĞÊôÓÚ¿Í»§¶ËµÄ<a href="KBEngine.html">KBEngine</a>ÊµÌåÀ´ËµÊÇÒ»¸öÖØÒªµÄ¸ÅÄî¡£
+Ò»¸öÊµÌåµÄViewÊÇÎ§ÈÆÕâ¸öÊµÌåµÄ¿Í»§¶Ë£¨Èç¹ûËüÓĞ£©ËùÄÜ¸ĞÖªµÄÇøÓò¡£ÕâÓÃÓÚÑ¡Ôñ·¢¸ø¿Í»§¶ËµÄÊı¾İÁ¿¡£ViewµÄÊµ¼Ê
 ĞÎ×´ÓÉxÖáºÍzÖáÉÏµÄ¾àÀë·¶Î§¶¨Òå£¬»¹ÓĞÒ»¸öÀàËÆĞÎ×´ÏòÍâÑÓÉìµÄÖÍºóÇøÓò¡£Ò»¸ö<a href=../../keywords.html#entity>Entity</a>½øÈë
-ÁíÒ»¸ö<a href=../../keywords.html#entity>Entity</a>µÄAOI£¬µ«²»»áÀë¿ªËüÖ±µ½ËüÀë¿ªÖÍºóÇøÓò¡£Ò»¸ö<a href=../../keywords.html#entity>Entity</a>¿ÉÒÔ
-Í¨¹ı"setAoiRadius"ĞŞ¸ÄËüµÄAOI´óĞ¡¡£
+ÁíÒ»¸ö<a href=../../keywords.html#entity>Entity</a>µÄView£¬µ«²»»áÀë¿ªËüÖ±µ½ËüÀë¿ªÖÍºóÇøÓò¡£Ò»¸ö<a href=../../keywords.html#entity>Entity</a>¿ÉÒÔ
+Í¨¹ı"setViewRadius"ĞŞ¸ÄËüµÄView´óĞ¡¡£
 ¿ÉÒÔÍ¨¹ı"entitiesInRange"ÕÒµ½Ò»¸ö¾ßÌå¾àÀëÖ®ÄÚµÄËùÓĞÊµÌå£¬Í¨¹ı"addProximity"ÉèÖÃÒ»¸öÏİÚå²¶»ñ½øÈëÏİÚåµÄËùÓĞÊµÌå¡£
 <br><br>
 cellAppÉÏĞÂµÄ<a href=../../keywords.html#entity>Entity</a>¿ÉÒÔÊ¹ÓÃ<a href="KBEngine.html">KBEngine</a>.<a href=KBEngine.html#createEntity>createEntity</a>
 ´´½¨¡£Ò»¸öÊµÌå»¹¿ÉÒÔÍ¨¹ıbaseAppÔ¶³Ìµ÷ÓÃ<a href="KBEngine.html">KBEngine</a>.<a href=KBEngine.html#createCellEntity>createCellEntity</a>º¯Êı
 À´´´½¨¡£
 <br><br>
-Ò»¸ö<a href=../../keywords.html#entity>Entity</a>¿ÉÒÔÍ¨¹ı<a href=../../keywords.html#Mailbox>MAILBOX</a>·ÃÎÊÔÚbaseºÍclientÓ¦ÓÃ³ÌĞòÉÏµÄµÈ¼ÛµÄÊµÌå¡£ÕâĞèÒª
+Ò»¸ö<a href=../../keywords.html#entity>Entity</a>¿ÉÒÔÍ¨¹ı<a href=../../keywords.html#EntityCall>ENTITYCALL</a>·ÃÎÊÔÚbaseºÍclientÓ¦ÓÃ³ÌĞòÉÏµÄµÈ¼ÛµÄÊµÌå¡£ÕâĞèÒª
 Ò»×éÔ¶³Ìµ÷ÓÃµÄº¯Êı£¨ÔÚÊµÌåµÄ.defÎÄ¼şÀïÖ¸¶¨£©¡£
 
 <hr>
@@ -448,7 +448,7 @@ float£¬¸ø¶¨´¥·¢Æ÷xzÖáÇøÓòµÄ´óĞ¡£¬±ØĞë´óÓÚµÈÓÚ0¡£
 
 <tr valign=top><td><span class="function_parameter_name"><i>rangeY</i></span></td><td><span class="function_parameter_description">
 float£¬¸ø¶¨´¥·¢Æ÷yÖá¸ß¶È£¬±ØĞë´óÓÚµÈÓÚ0¡£<br>
-ĞèÒª×¢ÒâµÄÊÇ£¬Õâ¸ö²ÎÊıÒªÉúĞ§±ØĞë¿ª·Å<a href=../../keywords.html#kbengine_defs.xml>kbengine_defs.xml</a>->cellapp->coordinate_system->rangemgr_y
+ĞèÒª×¢ÒâµÄÊÇ£¬Õâ¸ö²ÎÊıÒªÉúĞ§±ØĞë¿ª·Å<a href=../../keywords.html#kbengine_defaults.xml>kbengine_defaults.xml</a>->cellapp->coordinate_system->rangemgr_y
 <br>
 ¿ª·ÅyÖá¹ÜÀí»á´øÀ´Ò»Ğ©ÏûºÄ£¬ÒòÎªÒ»Ğ©ÓÎÏ·´óÁ¿µÄÊµÌå¶¼ÔÚÍ¬Ò»yÖá¸ß¶È»òÕßÔÚ²î²»¶àË®Æ½Ïß¸ß¶È£¬´ËÊ±Åö×²±äµÃ·Ç³£ÃÜ¼¯¡£<br>
 3DÌ«¿ÕÀàÓÎÏ·»òÕßĞ¡·¿¼äÀàÊµÌå½ÏÉÙµÄÓÎÏ·±È½ÏÊÊºÏ¿ª·Å´ËÑ¡Ïî¡£
@@ -563,7 +563,7 @@ controllerIDÊÇÒªÈ¡ÏûµÄ¿ØÖÆÆ÷µÄË÷Òı£¬ËüÊÇÒ»¸öÕûĞÍ¡£Ò»¸ö×¨ÓÃµÄ¿ØÖÆÆ÷ÀàĞÍµÄ×Ö·û´®Ò²
 
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
-Í¨¹ıÕâ¸ö·½·¨¿ÉÒÔ·ÃÎÊ×Ô¼º¿Í»§¶Ë£¨µ±Ç°ÊµÌå±ØĞë°ó¶¨ÁË¿Í»§¶Ë£©ÖĞÄ³¸öÊµÌåµÄ·½·¨£¬Ö»ÓĞÔÚAOI·¶Î§ÄÚµÄÊµÌå²Å»áÍ¬²½µ½¿Í»§¶Ë¡£ËüÖ»ÄÜÔÚÒ»¸ö<a href=../../keywords.html#real>real</a>ÊµÌåÉÏ±»µ÷ÓÃ¡£
+Í¨¹ıÕâ¸ö·½·¨¿ÉÒÔ·ÃÎÊ×Ô¼º¿Í»§¶Ë£¨µ±Ç°ÊµÌå±ØĞë°ó¶¨ÁË¿Í»§¶Ë£©ÖĞÄ³¸öÊµÌåµÄ·½·¨£¬Ö»ÓĞÔÚView·¶Î§ÄÚµÄÊµÌå²Å»áÍ¬²½µ½¿Í»§¶Ë¡£ËüÖ»ÄÜÔÚÒ»¸ö<a href=../../keywords.html#real>real</a>ÊµÌåÉÏ±»µ÷ÓÃ¡£
 </div>
 
 <p>
@@ -599,30 +599,30 @@ controllerIDÊÇÒªÈ¡ÏûµÄ¿ØÖÆÆ÷µÄË÷Òı£¬ËüÊÇÒ»¸öÕûĞÍ¡£Ò»¸ö×¨ÓÃµÄ¿ØÖÆÆ÷ÀàĞÍµÄ×Ö·û´®Ò²
 
 
 
-<a name="debugAOI"></a><p class="function_definition">
-<span class="function_definition">def debugAOI( <i>self</i> ):</span>
+<a name="debugView"></a><p class="function_definition">
+<span class="function_definition">def debugView( <i>self</i> ):</span>
 </p>
 
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
-debugAOIÊä³ö<a href=../../keywords.html#entity>Entity</a>µÄAOIµÄÏêÏ¸ĞÅÏ¢µ½cellµÄµ÷ÊÔÈÕÖ¾¡£
-Ò»·İAOIÏµÍ³¹¤×÷µÄÃèÊö¿ÉÒÔÔÚ<a href=../../keywords.html#entity>Entity</a>ÀàÎÄµµÖĞÕÒµ½¡£
+debugViewÊä³ö<a href=../../keywords.html#entity>Entity</a>µÄViewµÄÏêÏ¸ĞÅÏ¢µ½cellµÄµ÷ÊÔÈÕÖ¾¡£
+Ò»·İViewÏµÍ³¹¤×÷µÄÃèÊö¿ÉÒÔÔÚ<a href=../../keywords.html#entity>Entity</a>ÀàÎÄµµÖĞÕÒµ½¡£
 <br><br>
 Ò»·İÑùÆ·ĞÅÏ¢ÈçÏÂ£º
 
-<pre>  INFO cellapp [0x00001a1c] [2014-11-04 00:28:41,409] - Avatar::debugAOI: 100 size=4, Seen=4, Pending=0, aoiRadius=50.000, aoiHyst=5.000
-  INFO cellapp [0x00001a1c] [2014-11-04 00:28:41,409] - Avatar::debugAOI: 100 Avatar(102), position(771.586.211.002.776.55), dist=0
-  INFO cellapp [0x00001a1c] [2014-11-04 00:28:41,409] - Avatar::debugAOI: 100 Monster(1028), position(820.834.211.635.768.749), dist=49.8659
-  INFO cellapp [0x00001a1c] [2014-11-04 00:28:41,409] - Avatar::debugAOI: 100 NPC(1025), position(784.024.210.95.782.273), dist=13.6915
-  INFO cellapp [0x00001a1c] [2014-11-04 00:28:41,409] - Avatar::debugAOI: 100 Avatar(106), position(771.586.211.002.776.55), dist=0
+<pre>  INFO cellapp [0x00001a1c] [2014-11-04 00:28:41,409] - Avatar::debugView: 100 size=4, Seen=4, Pending=0, ViewRadius=50.000, ViewHyst=5.000
+  INFO cellapp [0x00001a1c] [2014-11-04 00:28:41,409] - Avatar::debugView: 100 Avatar(102), position(771.586.211.002.776.55), dist=0
+  INFO cellapp [0x00001a1c] [2014-11-04 00:28:41,409] - Avatar::debugView: 100 Monster(1028), position(820.834.211.635.768.749), dist=49.8659
+  INFO cellapp [0x00001a1c] [2014-11-04 00:28:41,409] - Avatar::debugView: 100 NPC(1025), position(784.024.210.95.782.273), dist=13.6915
+  INFO cellapp [0x00001a1c] [2014-11-04 00:28:41,409] - Avatar::debugView: 100 Avatar(106), position(771.586.211.002.776.55), dist=0
 </pre>
 ĞÅÏ¢µÄµÚÒ»ĞĞ¸æËßÎÒÃÇ£º
 <ul>
 <li>ÊµÌå#1000µÄÊı¾İ</li>
-<li>ÓĞ4¸öÊµÌåÔÚËüµÄAOIÇøÓò²¢ÇÒÒÑ¾­Í¬²½¸ø¿Í»§¶Ë¡£</li>
-<li>ÓĞ0¸öÊµÌåÔÚËüµÄAOIÇøÓò£¬ÕıÔÚµÈ´ıÍ¬²½µ½¿Í»§¶Ë¡£</li>
-<li>AOIµÄ°ë¾¶ÊÇ 50.000</li>
-<li>AOIµÄÖÍºóÇøÓòÏòÍâÑÓÉìÁË5.000</li>
+<li>ÓĞ4¸öÊµÌåÔÚËüµÄViewÇøÓò²¢ÇÒÒÑ¾­Í¬²½¸ø¿Í»§¶Ë¡£</li>
+<li>ÓĞ0¸öÊµÌåÔÚËüµÄViewÇøÓò£¬ÕıÔÚµÈ´ıÍ¬²½µ½¿Í»§¶Ë¡£</li>
+<li>ViewµÄ°ë¾¶ÊÇ 50.000</li>
+<li>ViewµÄÖÍºóÇøÓòÏòÍâÑÓÉìÁË5.000</li>
 </ul>
 </div>
 
@@ -690,6 +690,7 @@ integer£¬ËüÖ¸¶¨ÒªÒÆ³ıµÄ¶¨Ê±Æ÷id¡£
 <div class="function_description"> <b>¹¦ÄÜËµÃ÷£º</b><br>
   <br>
   ÏòÄ¿±êÊµÌå´«ÈëÊÀ½ç³¯Ïò£¬×ª“QÎªÏà¶ÔÓÚ¸ÃÄ¿±êÊµÌåµÄ±¾µØ³¯Ïò¡£</div>
+</p>
 <p> <span class="function_parameter">²ÎÊı£º</span>
 <table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
   <tr valign=top>
@@ -704,13 +705,15 @@ integer£¬ËüÖ¸¶¨ÒªÒÆ³ıµÄ¶¨Ê±Æ÷id¡£
     <td><span class="function_parameter_description"><a href=../../keywords.html#vector3>Vector3</a></span>£»Ïà¶ÔÓÚÄ¿±êÊµÌåµÄ±¾µØ³¯Ïò¡£ </td>
   </tr>
 </table>
-<a name="entitiesInAOI"></a><p class="function_definition">
-<span class="function_definition">def entitiesInAOI( <i>self</i> ):</span>
 </p>
 
+<a name="entitiesInView"></a>
+<p class="function_definition">
+<span class="function_definition">def entitiesInView( <i>self</i> ):</span>
+</p>
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
-»ñµÃÕâ¸öÊµÌåµÄ<a href=../../keywords.html#AOI>AOI</a>·¶Î§ÄÚµÄÊµÌåÁĞ±í¡£</div>
+»ñµÃÕâ¸öÊµÌåµÄ<a href=../../keywords.html#View>View</a>·¶Î§ÄÚµÄÊµÌåÁĞ±í¡£
 
 <a name="entitiesInRange"></a><p class="function_definition">
 <span class="function_definition">def entitiesInRange( <i>self, range, entityType=None, position=None</i> ):</span>
@@ -719,7 +722,7 @@ integer£¬ËüÖ¸¶¨ÒªÒÆ³ıµÄ¶¨Ê±Æ÷id¡£
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
 ÔÚ¸ø¶¨µÄ¾àÀëÄÚËÑË÷<a href="Entity.html">ÊµÌå</a>¡£ÕâÊÇÒ»¸öÇòĞÎµÄËÑË÷£¬3¸öÖáµÄ¾àÀë
-¶¼Òª²âÁ¿¡£Õâ¿ÉÒÔÕÒµ½ÔÚÕâ¸ö<a href="Entity.html">ÊµÌå</a>µÄ<a href=../../keywords.html#AOI>AOI</a>·¶Î§Ö®ÍâµÄÊµÌå£¬µ«²»ÄÜÕÒµ½ÆäËû<a href=../../keywords.html#cell>cell</a>µÄÊµÌå¡£<br><br>
+¶¼Òª²âÁ¿¡£Õâ¿ÉÒÔÕÒµ½ÔÚÕâ¸ö<a href="Entity.html">ÊµÌå</a>µÄ<a href=../../keywords.html#View>View</a>·¶Î§Ö®ÍâµÄÊµÌå£¬µ«²»ÄÜÕÒµ½ÆäËû<a href=../../keywords.html#cell>cell</a>µÄÊµÌå¡£<br><br>
 Àı×Ó£º
 
 <pre>  self.entitiesInRange( 100, 'Creature', (100, 0, 100) )
@@ -916,44 +919,44 @@ int£¬ĞÂ´´½¨µÄ¿ØÖÆÆ÷ID¡£
 
 
 
-<a name="getAoiRadius"></a><p class="function_definition">
-<span class="function_definition">def getAoiRadius( <i>self</i> ):</span>
+<a name="getViewRadius"></a><p class="function_definition">
+<span class="function_definition">def getViewRadius( <i>self</i> ):</span>
 </p>
 
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
-Õâ¸öº¯Êı·µ»ØÕâ¸ö<a href=../../keywords.html#entity>Entity</a>µ±Ç°µÄAoi°ë¾¶Öµ¡£
+Õâ¸öº¯Êı·µ»ØÕâ¸ö<a href=../../keywords.html#entity>Entity</a>µ±Ç°µÄView°ë¾¶Öµ¡£
 <br><br>
 Êı¾İ¿ÉÒÔÍ¨¹ı
-<a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#setAoiRadius>setAoiRadius</a>( radius, hyst )ÉèÖÃ¡£
+<a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#setViewRadius>setViewRadius</a>( radius, hyst )ÉèÖÃ¡£
 </div>
 
 <p>
 <span class="function_return">·µ»Ø£º</span>
 <table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
-<tr><td>float£¬ Aoi°ë¾¶¡£
+<tr><td>float£¬ View°ë¾¶¡£
 </td></tr>
 </table>
 </p>
 
 
 
-<a name="getAoiHystArea"></a><p class="function_definition">
-<span class="function_definition">def getAoiHystArea( <i>self</i> ):</span>
+<a name="getViewHystArea"></a><p class="function_definition">
+<span class="function_definition">def getViewHystArea( <i>self</i> ):</span>
 </p>
 
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
-Õâ¸öº¯Êı·µ»ØÕâ¸ö<a href=../../keywords.html#entity>Entity</a>µÄAoiµ±Ç°ÖÍºóÇøÓòÖµ¡£
+Õâ¸öº¯Êı·µ»ØÕâ¸ö<a href=../../keywords.html#entity>Entity</a>µÄViewµ±Ç°ÖÍºóÇøÓòÖµ¡£
 <br><br>
 Êı¾İ¿ÉÒÔÍ¨¹ı
-<a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#setAoiRadius>setAoiRadius</a>( radius, hyst )ÉèÖÃ¡£
+<a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#setViewRadius>setViewRadius</a>( radius, hyst )ÉèÖÃ¡£
 </div>
 
 <p>
 <span class="function_return">·µ»Ø£º</span>
 <table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
-<tr><td>float£¬ Aoiµ±Ç°ÖÍºóÇøÓòÖµ¡£
+<tr><td>float£¬ Viewµ±Ç°ÖÍºóÇøÓòÖµ¡£
 </td></tr>
 </table>
 </p>
@@ -1171,21 +1174,21 @@ uint16£¬ÓÃÓÚrecastnavigationµÄ¶àÇøÓò»®·Ö¹¦ÄÜ£¬±íÊ¾¿ÉÒÔÒÆ¶¯µÄ±êÖ¾Î»£¨È«²¿¿ÉÒÔÒÆ¶¯
 
 
 
-<a name="setAoiRadius"></a><p class="function_definition">
-<span class="function_definition">def setAoiRadius( <i>self, radius, hyst=5</i> ):</span>
+<a name="setViewRadius"></a><p class="function_definition">
+<span class="function_definition">def setViewRadius( <i>self, radius, hyst=5</i> ):</span>
 </p>
 
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
-Ö¸¶¨<a href=../../keywords.html#entity>Entity</a>µÄ<a href=../../keywords.html#AOI>¸ĞĞËÈ¤µÄÇøÓò</a>´óĞ¡¡£
+Ö¸¶¨<a href=../../keywords.html#entity>Entity</a>µÄ<a href=../../keywords.html#View>¸ĞĞËÈ¤µÄÇøÓò</a>´óĞ¡¡£
 <br><br>
 Õâ¸öº¯ÊıÖ»ÄÜÓÃÓÚÓĞ<a href=../../keywords.html#Witness>Witness</a>¹ØÁªµÄÊµÌå¡£
 <br><br>
 ×¢Òâ£º
-Äã¿ÉÒÔÍ¨¹ıÉèÖÃ<a href=../../keywords.html#kbengine.xml>kbengine.xml</a>ÅäÖÃÑ¡Ïî'cellapp/defaultAoIRadius'À´ÉèÖÃÄ¬ÈÏµÄAOI°ë¾¶¡£
+Äã¿ÉÒÔÍ¨¹ıÉèÖÃ<a href=../../keywords.html#kbengine.xml>kbengine.xml</a>ÅäÖÃÑ¡Ïî'cellapp/defaultViewRadius'À´ÉèÖÃÄ¬ÈÏµÄView°ë¾¶¡£
 <br><br>
 Êı¾İ¿ÉÒÔÍ¨¹ı
-<a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#getAoiRadius>getAoiRadius</a>( )Óë<a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#getAoiHystArea>getAoiHystArea</a>( )»ñµÃ¡£
+<a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#getViewRadius>getViewRadius</a>( )Óë<a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#getViewHystArea>getViewHystArea</a>( )»ñµÃ¡£
 </div>
 
 <p>
@@ -1193,12 +1196,12 @@ uint16£¬ÓÃÓÚrecastnavigationµÄ¶àÇøÓò»®·Ö¹¦ÄÜ£¬±íÊ¾¿ÉÒÔÒÆ¶¯µÄ±êÖ¾Î»£¨È«²¿¿ÉÒÔÒÆ¶¯
 <table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
 
 <tr valign=top><td><span class="function_parameter_name"><i>radius</i></span></td><td><span class="function_parameter_description">
-float£¬radiusÖ¸¶¨AOIÇøÓòµÄ°ë¾¶
+float£¬radiusÖ¸¶¨ViewÇøÓòµÄ°ë¾¶
 </span></td></tr>
 
 <tr valign=top><td><span class="function_parameter_name"><i>hyst</i></span></td><td><span class="function_parameter_description">
-float£¬Ö¸¶¨³¬¹ıAOIÇøÓòµÄÖÍºóÇøÓòµÄ´óĞ¡¡£ºÏÀíµÄÉè¶¨ÖÍºóÇøÓò½«ÄÜ¹»½µµÍAOIÅö×²µÄÃô¸Ğ¶È´Ó¶øÌá¸ßCPUÖ´ĞĞĞ§ÂÊ¡£<br>
-Ò»¸öÊµÌå½øÈëÁíÒ»¸öÊµÌåµÄAOI±ØĞë¿çÔ½AOI°ë¾¶ÇøÓò£¬µ«ÊµÌåÀë¿ªAOIÇøÓòÔòĞèÒªÒÆ³öAOI°ë¾¶ÇøÓò°üÀ¨ÖÍºóÇøÓò¡£
+float£¬Ö¸¶¨³¬¹ıViewÇøÓòµÄÖÍºóÇøÓòµÄ´óĞ¡¡£ºÏÀíµÄÉè¶¨ÖÍºóÇøÓò½«ÄÜ¹»½µµÍViewÅö×²µÄÃô¸Ğ¶È´Ó¶øÌá¸ßCPUÖ´ĞĞĞ§ÂÊ¡£<br>
+Ò»¸öÊµÌå½øÈëÁíÒ»¸öÊµÌåµÄView±ØĞë¿çÔ½View°ë¾¶ÇøÓò£¬µ«ÊµÌåÀë¿ªViewÇøÓòÔòĞèÒªÒÆ³öView°ë¾¶ÇøÓò°üÀ¨ÖÍºóÇøÓò¡£
 </span></td></tr>
 
 </table>
@@ -1266,7 +1269,7 @@ None
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
 Ë²¼äÒÆ¶¯Ò»¸ö<a href=../../keywords.html#entity>Entity</a>µ½Ò»¸öÖ¸¶¨µÄ¿Õ¼ä¡£Õâ¸öº¯ÊıÔÊĞíÖ¸¶¨ÊµÌåÒÆ¶¯ºóµÄÎ»ÖÃÓë³¯Ïò¡£<br>
-Èç¹ûĞèÒªÔÚ²»Í¬<a href=../../keywords.html#cn_Space>¿Õ¼ä</a>Ìø×ª£¨ Í¨³£ÓÃÓÚ²»Í¬³¡¾°»òÕß·¿¼äÌø×ª £©£¬¿ÉÒÔ´«Ò»¸ö<a href=../../keywords.html#Mailbox>CellMailbox</a>¸øÕâ¸öº¯Êı£¨ Õâ¸ömailboxËù¶ÔÓ¦µÄÊµÌå±ØĞëÔÚÄ¿µÄ<a href=../../keywords.html#cn_Space>¿Õ¼ä</a>ÖĞ £©¡£
+Èç¹ûĞèÒªÔÚ²»Í¬<a href=../../keywords.html#cn_Space>¿Õ¼ä</a>Ìø×ª£¨ Í¨³£ÓÃÓÚ²»Í¬³¡¾°»òÕß·¿¼äÌø×ª £©£¬¿ÉÒÔ´«Ò»¸ö<a href=../../keywords.html#EntityCall>CellEntityCall</a>¸øÕâ¸öº¯Êı£¨ Õâ¸öentityCallËù¶ÔÓ¦µÄÊµÌå±ØĞëÔÚÄ¿µÄ<a href=../../keywords.html#cn_Space>¿Õ¼ä</a>ÖĞ £©¡£
 <br><br>
 Õâ¸öº¯ÊıÖ»ÄÜÔÚ<a href=../../keywords.html#real>real</a>µÄÊµÌåÉÏ±»µ÷ÓÃ¡£
 </div>
@@ -1276,7 +1279,7 @@ None
 <table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
 
 <tr valign=top><td><span class="function_parameter_name"><i>nearbyMBRef</i></span></td><td><span class="function_parameter_description">
-Ò»¸ö¾ö¶¨<a href=../../keywords.html#entity>Entity</a>ÌøÍùÄÄ¸ö<a href=../../keywords.html#cSpace>Space</a>µÄ<a href=../../keywords.html#Mailbox>CellMailbox</a>£¨ Õâ¸ömailboxËù¶ÔÓ¦µÄÊµÌå±ØĞëÔÚÄ¿µÄ<a href=../../keywords.html#cSpace>Space</a>ÖĞ £©£¬Ëü±»ÈÏÎªÊÇ´«ËÍÄ¿µÄµØ¡£
+Ò»¸ö¾ö¶¨<a href=../../keywords.html#entity>Entity</a>ÌøÍùÄÄ¸ö<a href=../../keywords.html#cSpace>Space</a>µÄ<a href=../../keywords.html#EntityCall>CellEntityCall</a>£¨ Õâ¸öentityCallËù¶ÔÓ¦µÄÊµÌå±ØĞëÔÚÄ¿µÄ<a href=../../keywords.html#cSpace>Space</a>ÖĞ £©£¬Ëü±»ÈÏÎªÊÇ´«ËÍÄ¿µÄµØ¡£
 Õâ¸ö¿ÉÒÔÉèÎªNone£¬ÔÚÕâÖÖÇéĞÎÏÂËü»áÔÚµ±Ç°µÄcellÍê³ÉË²ÒÆ¡£
 </span></td></tr>
 
@@ -1313,14 +1316,14 @@ cellÊµÌåµÄÊı¾İÍ¬Ê±±¸·İÔÚbaseÊµÌå£¬È·±£Óöµ½ÔÖÄÑ»Ö¸´Êı¾İÊ±Êı¾İÊÇ×îĞÂµÄ¡£
 
 <tr valign=top><td><span class="function_parameter_name"><i>shouldAutoLoad</i></span></td><td><span class="function_parameter_description">
 Õâ¸ö¿ÉÑ¡²ÎÊıÖ¸¶¨Õâ¸öÊµÌåÔÚ·şÎñÆô¶¯µÄÊ±ºòÊÇ·ñĞèÒª´ÓÊı¾İ¿â¼ÓÔØ¡£<br>
-×¢Òâ£º·şÎñÆ÷Æô¶¯Ê±×Ô¶¯¼ÓÔØÊµÌå£¬µ×²ãÄ¬ÈÏ½«»áµ÷ÓÃcreateBaseAnywhereFromDBID½«ÊµÌå´´½¨µ½Ò»¸ö¸ºÔØ×îĞ¡µÄbaseappÉÏ£¬Õû¸ö¹ı³Ì½«»áÔÚµÚÒ»¸öÆô¶¯µÄbaseappµ÷ÓÃonBaseAppReadyÖ®Ç°Íê³É¡£<br>
-<br>½Å±¾²ã¿ÉÒÔÔÚ¸öĞÔ»¯½Å±¾(kbengine_defs.xml->baseapp->entryScriptFile¶¨Òå)ÖĞÖØĞÂÊµÏÖÊµÌåµÄ´´½¨·½·¨£¬ÀıÈç£º<br>
+×¢Òâ£º·şÎñÆ÷Æô¶¯Ê±×Ô¶¯¼ÓÔØÊµÌå£¬µ×²ãÄ¬ÈÏ½«»áµ÷ÓÃcreateEntityAnywhereFromDBID½«ÊµÌå´´½¨µ½Ò»¸ö¸ºÔØ×îĞ¡µÄbaseappÉÏ£¬Õû¸ö¹ı³Ì½«»áÔÚµÚÒ»¸öÆô¶¯µÄbaseappµ÷ÓÃonBaseAppReadyÖ®Ç°Íê³É¡£<br>
+<br>½Å±¾²ã¿ÉÒÔÔÚ¸öĞÔ»¯½Å±¾(kbengine_defaults.xml->baseapp->entryScriptFile¶¨Òå)ÖĞÖØĞÂÊµÏÖÊµÌåµÄ´´½¨·½·¨£¬ÀıÈç£º<br>
 def onAutoLoadEntityCreate(entityType, dbid): <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KBEngine.createBaseFromDBID(entityType, dbid)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KBEngine.createEntityFromDBID(entityType, dbid)<br>
 </span></td></tr>
 
 <tr valign=top><td><span class="function_parameter_name"><i>dbInterfaceName</i></span></td><td><span class="function_parameter_description">
-string£¬¿ÉÑ¡²ÎÊı£¬Ö¸¶¨ÓÉÄ³¸öÊı¾İ¿â½Ó¿ÚÀ´Íê³É, Ä¬ÈÏÊ¹ÓÃ"default"½Ó¿Ú¡£Êı¾İ¿â½Ó¿ÚÓÉkbengine_defs.xml->dbmgr->databaseInterfacesÖĞ¶¨Òå¡£
+string£¬¿ÉÑ¡²ÎÊı£¬Ö¸¶¨ÓÉÄ³¸öÊı¾İ¿â½Ó¿ÚÀ´Íê³É, Ä¬ÈÏÊ¹ÓÃ"default"½Ó¿Ú¡£Êı¾İ¿â½Ó¿ÚÓÉkbengine_defaults.xml->dbmgr->databaseInterfacesÖĞ¶¨Òå¡£
 </span></td></tr>
 
 </table>
@@ -1337,7 +1340,7 @@ string£¬¿ÉÑ¡²ÎÊı£¬Ö¸¶¨ÓÉÄ³¸öÊı¾İ¿â½Ó¿ÚÀ´Íê³É, Ä¬ÈÏÊ¹ÓÃ"default"½Ó¿Ú¡£Êı¾İ¿â½Ó¿ÚÓ
 <span class="function_definition">def onDestroy( <i>self</i> ):</span>
 </p>
 
-<div class="function_description">Èç¹ûÕâ¸öº¯ÊıÔÚ½Å±¾ÖĞÓĞÊµÏÖ£¬Õâ¸öº¯ÊıÔÚµ÷ÓÃ<a href="Base.html">Base</a>.<a href=Base.html#destroy>destroy</a>()ºó£¬ÔÚÊµ¼ÊÏú»ÙÖ®Ç°±»µ÷ÓÃ¡£
+<div class="function_description">Èç¹ûÕâ¸öº¯ÊıÔÚ½Å±¾ÖĞÓĞÊµÏÖ£¬Õâ¸öº¯ÊıÔÚµ÷ÓÃ<a href="Entity.html">Entity</a>.<a href=Entity.html#destroy>destroy</a>()ºó£¬ÔÚÊµ¼ÊÏú»ÙÖ®Ç°±»µ÷ÓÃ¡£
 Õâ¸öº¯ÊıÃ»ÓĞ²ÎÊı¡£
 </div>
 
@@ -1361,7 +1364,7 @@ float£¬¸ø¶¨´¥·¢Æ÷xzÖáÇøÓòµÄ´óĞ¡£¬±ØĞë´óÓÚµÈÓÚ0¡£
 
 <tr valign=top><td><span class="function_parameter_name"><i>rangeY</i></span></td><td><span class="function_parameter_description">
 float£¬¸ø¶¨´¥·¢Æ÷yÖá¸ß¶È£¬±ØĞë´óÓÚµÈÓÚ0¡£<br>
-ĞèÒª×¢ÒâµÄÊÇ£¬Õâ¸ö²ÎÊıÒªÉúĞ§±ØĞë¿ª·Å<a href=../../keywords.html#kbengine_defs.xml>kbengine_defs.xml</a>->cellapp->coordinate_system->rangemgr_y
+ĞèÒª×¢ÒâµÄÊÇ£¬Õâ¸ö²ÎÊıÒªÉúĞ§±ØĞë¿ª·Å<a href=../../keywords.html#kbengine_defaults.xml>kbengine_defaults.xml</a>->cellapp->coordinate_system->rangemgr_y
 <br>
 ¿ª·ÅyÖá¹ÜÀí»á´øÀ´Ò»Ğ©ÏûºÄ£¬ÒòÎªÒ»Ğ©ÓÎÏ·´óÁ¿µÄÊµÌå¶¼ÔÚÍ¬Ò»yÖá¸ß¶È»òÕßÔÚ²î²»¶àË®Æ½Ïß¸ß¶È£¬´ËÊ±Åö×²±äµÃ·Ç³£ÃÜ¼¯¡£<br>
 3DÌ«¿ÕÀàÓÎÏ·»òÕßĞ¡·¿¼äÀàÊµÌå½ÏÉÙµÄÓÎÏ·±È½ÏÊÊºÏ¿ª·Å´ËÑ¡Ïî¡£
@@ -1376,18 +1379,18 @@ float£¬¸ø¶¨´¥·¢Æ÷yÖá¸ß¶È£¬±ØĞë´óÓÚµÈÓÚ0¡£<br>
 </table>
 </p>
 
-<a name="onEnteredAoI"></a><p class="function_definition">
-<span class="function_definition">def onEnteredAoI( <i>self, entity</i> ):</span>
+<a name="onEnteredView"></a><p class="function_definition">
+<span class="function_definition">def onEnteredView( <i>self, entity</i> ):</span>
 </p>
 
-<div class="function_description">Èç¹ûÕâ¸öº¯ÊıÔÚ½Å±¾ÖĞÓĞÊµÏÖ£¬µ±Ò»¸öÊµÌå½øÈëÁËµ±Ç°ÊµÌåµÄ<a href=../../keywords.html#AOI>AOI</a>·¶Î§£¬¸Ã»Øµ÷±»´¥·¢¡£
+<div class="function_description">Èç¹ûÕâ¸öº¯ÊıÔÚ½Å±¾ÖĞÓĞÊµÏÖ£¬µ±Ò»¸öÊµÌå½øÈëÁËµ±Ç°ÊµÌåµÄ<a href=../../keywords.html#View>View</a>·¶Î§£¬¸Ã»Øµ÷±»´¥·¢¡£
 </div>
 
 <p>
 <span class="function_parameter">²ÎÊı£º</span>
 <table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
 
-<tr valign=top><td><span class="function_parameter_name"><i>entity</i></span></td><td><span class="function_parameter_description">&nbsp;½øÈëAOI·¶Î§µÄÊµÌå¡£
+<tr valign=top><td><span class="function_parameter_name"><i>entity</i></span></td><td><span class="function_parameter_description">&nbsp;½øÈëView·¶Î§µÄÊµÌå¡£
 </span></td></tr>
 
 </table>
@@ -1430,7 +1433,7 @@ float£¬¸ø¶¨´¥·¢Æ÷xzÖáÇøÓòµÄ´óĞ¡£¬±ØĞë´óÓÚµÈÓÚ0¡£
 
 <tr valign=top><td><span class="function_parameter_name"><i>rangeY</i></span></td><td><span class="function_parameter_description">
 float£¬¸ø¶¨´¥·¢Æ÷yÖá¸ß¶È£¬±ØĞë´óÓÚµÈÓÚ0¡£<br>
-ĞèÒª×¢ÒâµÄÊÇ£¬Õâ¸ö²ÎÊıÒªÉúĞ§±ØĞë¿ª·Å<a href=../../keywords.html#kbengine_defs.xml>kbengine_defs.xml</a>->cellapp->coordinate_system->rangemgr_y
+ĞèÒª×¢ÒâµÄÊÇ£¬Õâ¸ö²ÎÊıÒªÉúĞ§±ØĞë¿ª·Å<a href=../../keywords.html#kbengine_defaults.xml>kbengine_defaults.xml</a>->cellapp->coordinate_system->rangemgr_y
 <br>
 ¿ª·ÅyÖá¹ÜÀí»á´øÀ´Ò»Ğ©ÏûºÄ£¬ÒòÎªÒ»Ğ©ÓÎÏ·´óÁ¿µÄÊµÌå¶¼ÔÚÍ¬Ò»yÖá¸ß¶È»òÕßÔÚ²î²»¶àË®Æ½Ïß¸ß¶È£¬´ËÊ±Åö×²±äµÃ·Ç³£ÃÜ¼¯¡£<br>
 3DÌ«¿ÕÀàÓÎÏ·»òÕßĞ¡·¿¼äÀàÊµÌå½ÏÉÙµÄÓÎÏ·±È½ÏÊÊºÏ¿ª·Å´ËÑ¡Ïî¡£
@@ -1596,7 +1599,7 @@ float£¬¸ø¶¨´¥·¢Æ÷yÖá¸ß¶È£¬±ØĞë´óÓÚµÈÓÚ0¡£<br>
 <span class="function_definition">def onTeleport( <i>self</i> ):</span>
 </p>
 
-<div class="function_description">Èç¹ûÕâ¸öº¯ÊıÔÚ½Å±¾ÖĞÓĞÊµÏÖ£¬ÔÚÍ¨¹ıBase.teleportµ÷ÓÃ·¢ÉúµÄÊµÌå´«ËÍÖĞ£¬ÊµÌå(Real entity)±»´«ËÍÖ®Ç°µÄÊ±¿Ì´Ë·½·¨»á±»µ÷ÓÃ¡£<br>
+<div class="function_description">Èç¹ûÕâ¸öº¯ÊıÔÚ½Å±¾ÖĞÓĞÊµÏÖ£¬ÔÚÍ¨¹ıbaseappµÄEntity.teleportµ÷ÓÃ·¢ÉúµÄÊµÌå´«ËÍÖĞ£¬ÊµÌå(Real entity)±»´«ËÍÖ®Ç°µÄÊ±¿Ì´Ë·½·¨»á±»µ÷ÓÃ¡£<br>
 Çë×¢Òâ£¬ÔÚcellÉÏµ÷ÓÃÊµÌåµÄteleport²¢²»»á»Øµ÷´Ë½Ó¿Ú£¬Èç¹ûÄãĞèÒªÕâ¸ö¹¦ÄÜÇëÔÚ<a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#teleport>teleport</a>Ö®ºóµ÷ÓÃ´Ë»Øµ÷¡£
 </div>
 
@@ -1677,7 +1680,7 @@ float£¬¸ø¶¨´¥·¢Æ÷yÖá¸ß¶È£¬±ØĞë´óÓÚµÈÓÚ0¡£<br>
 <span class="function_definition">def onWitnessed( <i>self, isWitnessed</i> ):</span>
 </p>
 
-<div class="function_description">Èç¹ûÕâ¸öº¯ÊıÔÚ½Å±¾ÖĞÓĞÊµÏÖ£¬Èç¹ûµ±Ç°ÊµÌå½øÈëÁËÁíÒ»¸ö°ó¶¨ÁËWitnessµÄÊµÌåµÄAOI·¶Î§£¨Ò²¿ÉÒÔÀí½âÎªÒ»¸öÊµÌå±»¹Û²ìÕß¹Û²ìµ½ÁË£©£¬Ôò¸ÃÊµÌåµÄ»Øµ÷º¯Êı±»µ÷ÓÃ¡£<br>
+<div class="function_description">Èç¹ûÕâ¸öº¯ÊıÔÚ½Å±¾ÖĞÓĞÊµÏÖ£¬Èç¹ûµ±Ç°ÊµÌå½øÈëÁËÁíÒ»¸ö°ó¶¨ÁËWitnessµÄÊµÌåµÄView·¶Î§£¨Ò²¿ÉÒÔÀí½âÎªÒ»¸öÊµÌå±»¹Û²ìÕß¹Û²ìµ½ÁË£©£¬Ôò¸ÃÊµÌåµÄ»Øµ÷º¯Êı±»µ÷ÓÃ¡£<br>
 ¿ÉÒÔÀûÓÃÕâ¸öº¯ÊıÔÚÊµÌå±»¹Û²ìÊ±¼¤»îÊµÌåµÄAI£¬ÊµÌåÍ£Ö¹±»¹Û²ìÊ±¿ÉÒÔÍ£Ö¹AIµÄÖ´ĞĞ£¬ÕâÑù¿ÉÒÔ½µµÍ·şÎñ¶ËµÄ¼ÆËãÁ¿´Ó¶øÌáÉıĞ§ÂÊ¡£
 </div>
 
@@ -1708,9 +1711,9 @@ float£¬¸ø¶¨´¥·¢Æ÷yÖá¸ß¶È£¬±ØĞë´óÓÚµÈÓÚ0¡£<br>
 <span class="attribute_definition">allClients</span>
 </p>
 
-<div class="attribute_description">Í¨¹ıÕâ¸öÊôĞÔµ÷ÓÃÊµÌåµÄ¿Í»§¶ËÔ¶³Ì·½·¨£¬ÒıÇæ»á½«Õâ¸öÏûÏ¢¹ã²¥¸øÊµÌåAOI·¶Î§ÄÚËùÓĞµÄÆäËû°ó¶¨ÁË¿Í»§¶ËµÄÊµÌå(°üÀ¨×Ô¼ºµÄ¿Í»§¶Ë£¬°ó¶¨ÁË¿Í»§¶ËµÄÊµÌåÍ¨³£ÎªÍæ¼Ò)¡£<br><br>
+<div class="attribute_description">Í¨¹ıÕâ¸öÊôĞÔµ÷ÓÃÊµÌåµÄ¿Í»§¶ËÔ¶³Ì·½·¨£¬ÒıÇæ»á½«Õâ¸öÏûÏ¢¹ã²¥¸øÊµÌåView·¶Î§ÄÚËùÓĞµÄÆäËû°ó¶¨ÁË¿Í»§¶ËµÄÊµÌå(°üÀ¨×Ô¼ºµÄ¿Í»§¶Ë£¬°ó¶¨ÁË¿Í»§¶ËµÄÊµÌåÍ¨³£ÎªÍæ¼Ò)¡£<br><br>
 Àı×Ó£º<br>
-avatarµÄAOI·¶Î§ÄÚÓĞÍæ¼ÒAºÍÍæ¼ÒBÒÔ¼°¹ÖÎïC¡£<br>
+avatarµÄView·¶Î§ÄÚÓĞÍæ¼ÒAºÍÍæ¼ÒBÒÔ¼°¹ÖÎïC¡£<br>
 avatar.allClients.attack(monsterID£¬skillID, damage)<br><br>
 ´ËÊ±£¬Íæ¼Ò×Ô¼ººÍÍæ¼ÒA»¹ÓĞÍæ¼ÒBµÄ¿Í»§¶Ë¶¼»áµ÷ÓÃµ½¸ÃÊµÌåattack·½·¨£¬ÔÚËûÃÇµÄ¿Í»§¶Ë¿ÉÒÔµ÷ÓÃÖ¸¶¨¼¼ÄÜµÄ¹¥»÷¶¯×÷×ö±íÏÖ¡£
 </div>
@@ -1728,7 +1731,7 @@ avatar.allClients.attack(monsterID£¬skillID, damage)<br><br>
 <span class="attribute_definition">base</span>
 </p>
 
-<div class="attribute_description">baseÊÇÓÃÓÚÁªÏµ<a href=../../baseapp/classes/Base.html>Base</a>ÊµÌåµÄmailbox¡£Õâ¸öÊôĞÔÊÇÖ»¶ÁµÄ£¬ÇÒÈç¹ûÕâ¸öÊµÌåÃ»ÓĞ¹ØÁªµÄ<a href=../../baseapp/classes/Base.html>Base</a>ÊµÌåÊ±ÊôĞÔÊÇNone¡£
+<div class="attribute_description">baseÊÇÓÃÓÚÁªÏµ<a href=../../baseapp/classes/Entity.html>Entity</a>ÊµÌåµÄentityCall¡£Õâ¸öÊôĞÔÊÇÖ»¶ÁµÄ£¬ÇÒÈç¹ûÕâ¸öÊµÌåÃ»ÓĞ¹ØÁªµÄ<a href=../../baseapp/classes/Entity.html>Entity</a>ÊµÌåÊ±ÊôĞÔÊÇNone¡£
 </div>
 
 <p>
@@ -1741,7 +1744,7 @@ avatar.allClients.attack(monsterID£¬skillID, damage)<br><br>
 <p>
 <span class="attribute_type">ÀàĞÍ£º</span>
 <table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
-<tr><td>Ö»¶ÁµÄ£¬<a href=../../keywords.html#Mailbox>MAILBOX</a>
+<tr><td>Ö»¶ÁµÄ£¬<a href=../../keywords.html#EntityCall>ENTITYCALL</a>
 </td></tr>
 </table>
 </p>
@@ -1767,7 +1770,7 @@ avatar.allClients.attack(monsterID£¬skillID, damage)<br><br>
 <span class="attribute_definition">client</span>
 </p>
 
-<div class="attribute_description">clientÊÇÓÃÓÚÁªÏµ¿Í»§¶ËµÄmailbox¡£Õâ¸öÊôĞÔÊÇÖ»¶ÁµÄ£¬ÇÒÈç¹ûÕâ¸öÊµÌåÃ»ÓĞ¹ØÁªµÄ¿Í»§¶ËÊ±ÊôĞÔÊÇNone¡£
+<div class="attribute_description">clientÊÇÓÃÓÚÁªÏµ¿Í»§¶ËµÄentityCall¡£Õâ¸öÊôĞÔÊÇÖ»¶ÁµÄ£¬ÇÒÈç¹ûÕâ¸öÊµÌåÃ»ÓĞ¹ØÁªµÄ¿Í»§¶ËÊ±ÊôĞÔÊÇNone¡£
 </div>
 
 <p>
@@ -1780,7 +1783,7 @@ avatar.allClients.attack(monsterID£¬skillID, damage)<br><br>
 <p>
 <span class="attribute_type">ÀàĞÍ£º</span>
 <table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
-<tr><td>Ö»¶ÁµÄ£¬<a href=../../keywords.html#Mailbox>MAILBOX</a>
+<tr><td>Ö»¶ÁµÄ£¬<a href=../../keywords.html#EntityCall>ENTITYCALL</a>
 </td></tr>
 </table>
 </p>
@@ -1791,8 +1794,8 @@ avatar.allClients.attack(monsterID£¬skillID, damage)<br><br>
 <span class="attribute_definition">controlledBy</span>
 </p>
 
-<div class="attribute_description">¸ÃÊôĞÔÈç¹ûÉèÖÃÎªÄ³¸ö¿Í»§¶ËËù¹ØÁªµÄ·şÎñ¶ËÊµÌåµÄBaseEntityMailBox£¬ÄÇÃ´¸ÃÊµÌåÓÉ¶ÔÓ¦µÄ¿Í»§¶ËÀ´¿ØÖÆÒÆ¶¯£¬Èç¹û¸ÃÊôĞÔÎªNoneÔòÊµÌåÓÉ·şÎñ¶ËÒÆ¶¯¡£
-µ±¿Í»§¶ËµÇÂ½ºóµ÷ÓÃgiveClientToµ½¸ÃÊµÌåÊ±£¬¸ÃÊôĞÔ»á×Ô¶¯µÄÉèÖÃÎª×Ô¼ºµÄBaseEntityMailBox¡£
+<div class="attribute_description">¸ÃÊôĞÔÈç¹ûÉèÖÃÎªÄ³¸ö¿Í»§¶ËËù¹ØÁªµÄ·şÎñ¶ËÊµÌåµÄBaseEntityCall£¬ÄÇÃ´¸ÃÊµÌåÓÉ¶ÔÓ¦µÄ¿Í»§¶ËÀ´¿ØÖÆÒÆ¶¯£¬Èç¹û¸ÃÊôĞÔÎªNoneÔòÊµÌåÓÉ·şÎñ¶ËÒÆ¶¯¡£
+µ±¿Í»§¶ËµÇÂ½ºóµ÷ÓÃgiveClientToµ½¸ÃÊµÌåÊ±£¬¸ÃÊôĞÔ»á×Ô¶¯µÄÉèÖÃÎª×Ô¼ºµÄBaseEntityCall¡£
 <br>
 ½Å±¾¿ÉÒÔÁé»îµÄ¿ØÖÆ¸ÃÊµÌåÓÉ·şÎñ¶Ë¿ØÖÆÒÆ¶¯»òÊÇÓÉ¿Í»§¶Ë£¨×Ô¼ºµÄ¿Í»§¶Ë»òÊÇÆäËû¿Í»§¶Ë£©¿ØÖÆÒÆ¶¯¡£
 </div>
@@ -1807,7 +1810,7 @@ avatar.allClients.attack(monsterID£¬skillID, damage)<br><br>
 <p>
 <span class="attribute_type">ÀàĞÍ£º</span>
 <table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
-<tr><td><a href=../../keywords.html#Mailbox>BaseEntityMailBox </a>
+<tr><td><a href=../../keywords.html#EntityCall>BaseEntityCall </a>
 </td></tr>
 </table>
 </p>
@@ -1841,7 +1844,7 @@ self.direction.z = 1.0
 <span class="attribute_definition">hasWitness</span>
 </p>
 
-<div class="attribute_description">Õâ¸öÖ»¶ÁÊôĞÔÈç¹ûÎªTrue£¬±íÊ¾ÊµÌåÒÑ¾­°ó¶¨ÁËÒ»¸ö<a href=../../keywords.html#Witness>Witness</a>£¬°ó¶¨ÁËWitnessµÄÊµÌåÔò¿Í»§¶Ë¿ÉÒÔÍ¨¹ıÊµÌå»ñµÃÊµÌåAOI·¶Î§ÄÚµÄĞÅÏ¢¡£·ñÔòÎªFalse¡£
+<div class="attribute_description">Õâ¸öÖ»¶ÁÊôĞÔÈç¹ûÎªTrue£¬±íÊ¾ÊµÌåÒÑ¾­°ó¶¨ÁËÒ»¸ö<a href=../../keywords.html#Witness>Witness</a>£¬°ó¶¨ÁËWitnessµÄÊµÌåÔò¿Í»§¶Ë¿ÉÒÔÍ¨¹ıÊµÌå»ñµÃÊµÌåView·¶Î§ÄÚµÄĞÅÏ¢¡£·ñÔòÎªFalse¡£
 </div>
 
 <p>
@@ -1904,7 +1907,7 @@ self.direction.z = 1.0
 <span class="attribute_definition">isWitnessed</span>
 </p>
 
-<div class="attribute_description">Èç¹ûµ±Ç°ÊµÌå½øÈëÁËÁíÒ»¸ö°ó¶¨ÁËWitnessµÄÊµÌåµÄAOI·¶Î§£¨Ò²¿ÉÒÔÀí½âÎªÒ»¸öÊµÌå±»¹Û²ìÕß¹Û²ìµ½ÁË, Õâ¸öÊôĞÔÖµÎªTrue£¬·ñÔòÎªFalse¡£
+<div class="attribute_description">Èç¹ûµ±Ç°ÊµÌå½øÈëÁËÁíÒ»¸ö°ó¶¨ÁËWitnessµÄÊµÌåµÄView·¶Î§£¨Ò²¿ÉÒÔÀí½âÎªÒ»¸öÊµÌå±»¹Û²ìÕß¹Û²ìµ½ÁË, Õâ¸öÊôĞÔÖµÎªTrue£¬·ñÔòÎªFalse¡£
 <br><br>
 ²Î¿¼£º<br>
 <a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#onWitnessed>onWitnessed</a>
@@ -1974,9 +1977,9 @@ self.direction.z = 1.0
 <span class="attribute_definition">otherClients</span>
 </p>
 
-<div class="attribute_description">Í¨¹ıÕâ¸öÊôĞÔµ÷ÓÃÊµÌåµÄ¿Í»§¶ËÔ¶³Ì·½·¨£¬ÒıÇæ»á½«Õâ¸öÏûÏ¢¹ã²¥¸øÊµÌåAOI·¶Î§ÄÚËùÓĞµÄÆäËû°ó¶¨ÁË¿Í»§¶ËµÄÊµÌå(²»°üÀ¨×Ô¼ºµÄ¿Í»§¶Ë£¬°ó¶¨ÁË¿Í»§¶ËµÄÊµÌåÍ¨³£ÎªÍæ¼Ò)¡£<br><br>
+<div class="attribute_description">Í¨¹ıÕâ¸öÊôĞÔµ÷ÓÃÊµÌåµÄ¿Í»§¶ËÔ¶³Ì·½·¨£¬ÒıÇæ»á½«Õâ¸öÏûÏ¢¹ã²¥¸øÊµÌåView·¶Î§ÄÚËùÓĞµÄÆäËû°ó¶¨ÁË¿Í»§¶ËµÄÊµÌå(²»°üÀ¨×Ô¼ºµÄ¿Í»§¶Ë£¬°ó¶¨ÁË¿Í»§¶ËµÄÊµÌåÍ¨³£ÎªÍæ¼Ò)¡£<br><br>
 Àı×Ó£º<br>
-avatarµÄAOI·¶Î§ÄÚÓĞÍæ¼ÒAºÍÍæ¼ÒBÒÔ¼°¹ÖÎïC¡£<br>
+avatarµÄView·¶Î§ÄÚÓĞÍæ¼ÒAºÍÍæ¼ÒBÒÔ¼°¹ÖÎïC¡£<br>
 avatar.otherClients.attack(monsterID£¬skillID, damage)<br><br>
 ´ËÊ±£¬Íæ¼ÒAÓëÍæ¼ÒBµÄ¿Í»§¶Ë¶¼»áµ÷ÓÃµ½¸ÃÊµÌåattack·½·¨£¬ÔÚËûÃÇµÄ¿Í»§¶Ë¿ÉÒÔµ÷ÓÃÖ¸¶¨¼¼ÄÜµÄ¹¥»÷¶¯×÷×ö±íÏÖ¡£
 </div>
@@ -2106,7 +2109,7 @@ avatar.otherClients.attack(monsterID£¬skillID, damage)<br><br>
 
 <div class="attribute_description">Õâ¸öÊôĞÔÖ¸¶¨<a href=../../keywords.html#entity>Entity</a>µÄÒ×±äÀàÊı¾İÍ¬²½µ½¿Í»§¶ËµÄ²ßÂÔ¡£<br>
 Ò×±äÀàÊı¾İ°üÀ¨ÊµÌåµÄ×ø±êpositionºÍÊµÌåµÄ³¯Ïòdirection£¬Ò×±äÀàÊı¾İÓÉÓÚ¼«Ò×¸Ä±äµÄÌØĞÔ£¬ÒıÇæµ×²ãÊ¹ÓÃÁËÒ»Ì×ÓÅ»¯µÄ·½°¸½«ÆäÍ¬²½µ½¿Í»§¶Ë¡£<br>
-Õâ¸öÊôĞÔÊÇËÄ¸öfloat£¨position£¬yaw£¬pitch£¬roll£©´ú±í¾àÀëÖµ£¬µ±Ò»¸öÊµÌå¿¿½üµ±Ç°ÊµÌå´ïµ½¾àÀëÔò·şÎñ¶ËÏòÆäÍ¬²½Ïà¹ØÊı¾İ¡£Èç¹û¾àÀëÖµ´óÓÚAOI°ë¾¶Ôò´ú±í×ÜÊÇÍ¬²½¡£<br><br>
+Õâ¸öÊôĞÔÊÇËÄ¸öfloat£¨position£¬yaw£¬pitch£¬roll£©´ú±í¾àÀëÖµ£¬µ±Ò»¸öÊµÌå¿¿½üµ±Ç°ÊµÌå´ïµ½¾àÀëÔò·şÎñ¶ËÏòÆäÍ¬²½Ïà¹ØÊı¾İ¡£Èç¹û¾àÀëÖµ´óÓÚView°ë¾¶Ôò´ú±í×ÜÊÇÍ¬²½¡£<br><br>
 »¹ÓĞÒ»¸öÌØÊâµÄboolÊôĞÔoptimized£¬ËüµÄ×÷ÓÃÊÇ¿ØÖÆ·şÎñÆ÷Í¬²½Ê±ÊÇ·ñ½øĞĞÓÅ»¯£¬Ä¿Ç°Ö÷ÒªµÄÓÅ»¯ÊÇYÖá¡£<br>
 Èç¹ûÎªtrue£¬ÔÚÒ»Ğ©ĞĞÎª(Èç£ºnavigate)µ¼ÖÂ·şÎñÆ÷ÄÜÈ·¶¨ÊµÌåÔÚµØÃæÊ±£¬·şÎñÆ÷²»Í¬²½ÊµÌåµÄYÖá×ø±ê£¬µ±Í¬²½´óÁ¿ÊµÌåÊ±ÄÜ½ÚÊ¡´óÁ¿´ø¿í£¬Ä¬ÈÏÎªtrue¡£<br>
 <br><br>

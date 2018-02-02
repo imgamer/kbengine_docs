@@ -428,10 +428,10 @@ int32£¬Òª·ÅÖÃÊµÌåµÄ¿Õ¼äµÄID¡£
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
 Êä³öµ±Ç°KBEngine×·×ÙµÄPythonÀ©Õ¹¶ÔÏó¼ÆÊıÆ÷¡£<br>
-À©Õ¹¶ÔÏó°üÀ¨£º¹Ì¶¨×Öµä¡¢¹Ì¶¨Êı×é¡¢Entity¡¢Mailbox...<br>
+À©Õ¹¶ÔÏó°üÀ¨£º¹Ì¶¨×Öµä¡¢¹Ì¶¨Êı×é¡¢Entity¡¢EntityCall...<br>
 ÔÚ·şÎñ¶ËÕı³£¹Ø±ÕÊ±Èç¹û¼ÆÊıÆ÷²»ÎªÁã£¬´ËÊ±ËµÃ÷Ğ¹Â¶ÒÑ´æÔÚ£¬ÈÕÖ¾½«»áÊä³ö´íÎóĞÅÏ¢¡£<br><br>
 ERROR cellapp [0x0000cd64] [2014-11-12 00:38:07,300] - PyGC::debugTracing(): FixedArray : leaked(128)<br>
-ERROR cellapp [0x0000cd64] [2014-11-12 00:38:07,300] - PyGC::debugTracing(): EntityMailbox : leaked(8)
+ERROR cellapp [0x0000cd64] [2014-11-12 00:38:07,300] - PyGC::debugTracing(): EntityCall : leaked(8)
 </div>
 
 
@@ -579,7 +579,7 @@ int32£¬¿ÉÑ¡²ÎÊı£¬Ö¸¶¨Ò»¸öÏß³ÌÀ´´¦Àí±¾ÌõÃüÁî¡£ÓÃ»§¿ÉÒÔÍ¨¹ıÕâ¸ö²ÎÊı¿ØÖÆÄ³Ò»ÀàÃüÁîµ
 </span></td></tr>
 
 <tr valign=top><td><span class="function_parameter_name"><i>dbInterfaceName</i></span></td><td><span class="function_parameter_description">
-string£¬¿ÉÑ¡²ÎÊı£¬Ö¸¶¨ÓÉÄ³¸öÊı¾İ¿â½Ó¿ÚÀ´Íê³É, Ä¬ÈÏÊ¹ÓÃ"default"½Ó¿Ú¡£Êı¾İ¿â½Ó¿ÚÓÉkbengine_defs.xml->dbmgr->databaseInterfacesÖĞ¶¨Òå¡£
+string£¬¿ÉÑ¡²ÎÊı£¬Ö¸¶¨ÓÉÄ³¸öÊı¾İ¿â½Ó¿ÚÀ´Íê³É, Ä¬ÈÏÊ¹ÓÃ"default"½Ó¿Ú¡£Êı¾İ¿â½Ó¿ÚÓÉkbengine_defaults.xml->dbmgr->databaseInterfacesÖĞ¶¨Òå¡£
 </span></td></tr>
 
 </table>
@@ -1313,7 +1313,7 @@ string£¬×Ö·û´®Öµ¡£
 <span class="function_return">·µ»Ø£º</span>
 <table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
 <tr><td>
-uint32£¬µ±Ç°ÓÎÏ·µÄÊ±¼ä£¬ÕâÀïÖ¸ÖÜÆÚÊı£¬ÖÜÆÚÊÜÆµÂÊÓ°Ïì£¬ÆµÂÊÓÉÅäÖÃÎÄ¼ş<a href=../../keywords.html#kbengine.xml>kbengine.xml</a>»òÕß<a href=../../keywords.html#kbengine_defs.xml>kbengine_defs.xml</a>->gameUpdateHertz¾ö¶¨¡£
+uint32£¬µ±Ç°ÓÎÏ·µÄÊ±¼ä£¬ÕâÀïÖ¸ÖÜÆÚÊı£¬ÖÜÆÚÊÜÆµÂÊÓ°Ïì£¬ÆµÂÊÓÉÅäÖÃÎÄ¼ş<a href=../../keywords.html#kbengine.xml>kbengine.xml</a>»òÕß<a href=../../keywords.html#kbengine_defaults.xml>kbengine_defaults.xml</a>->gameUpdateHertz¾ö¶¨¡£
 </td></tr>
 </table>
 </p>
@@ -1330,7 +1330,7 @@ uint32£¬µ±Ç°ÓÎÏ·µÄÊ±¼ä£¬ÕâÀïÖ¸ÖÜÆÚÊı£¬ÖÜÆÚÊÜÆµÂÊÓ°Ïì£¬ÆµÂÊÓÉÅäÖÃÎÄ¼ş<a href=../.
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
 KBEngine.cellAppDataÓĞ¸Ä±äÊ±»Øµ÷´Ëº¯Êı¡£
-<br>×¢Òâ£º¸Ã»Øµ÷½Ó¿Ú±ØĞëÊµÏÖÔÚÈë¿ÚÄ£¿é(<a href=../../keywords.html#kbengine_defs.xml>kbengine_defs.xml</a>->entryScriptFile)ÖĞ¡£
+<br>×¢Òâ£º¸Ã»Øµ÷½Ó¿Ú±ØĞëÊµÏÖÔÚÈë¿ÚÄ£¿é(<a href=../../keywords.html#kbengine_defaults.xml>kbengine_defaults.xml</a>->entryScriptFile)ÖĞ¡£
 </div>
 
 <p>
@@ -1355,7 +1355,7 @@ KBEngine.cellAppDataÓĞ¸Ä±äÊ±»Øµ÷´Ëº¯Êı¡£
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
 KBEngine.cellAppDataÓĞÉ¾³ıµÄÊ±ºò»Øµ÷´Ëº¯Êı¡£
-<br>×¢Òâ£º¸Ã»Øµ÷½Ó¿Ú±ØĞëÊµÏÖÔÚÈë¿ÚÄ£¿é(<a href=../../keywords.html#kbengine_defs.xml>kbengine_defs.xml</a>->entryScriptFile)ÖĞ¡£
+<br>×¢Òâ£º¸Ã»Øµ÷½Ó¿Ú±ØĞëÊµÏÖÔÚÈë¿ÚÄ£¿é(<a href=../../keywords.html#kbengine_defaults.xml>kbengine_defaults.xml</a>->entryScriptFile)ÖĞ¡£
 </div>
 
 <p>
@@ -1391,7 +1391,7 @@ KBEngine.cellAppDataÓĞÉ¾³ıµÄÊ±ºò»Øµ÷´Ëº¯Êı¡£
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
 KBEngine.globalDataÓĞ¸Ä±äµÄÊ±ºò»Øµ÷´Ëº¯Êı¡£
-<br>×¢Òâ£º¸Ã»Øµ÷½Ó¿Ú±ØĞëÊµÏÖÔÚÈë¿ÚÄ£¿é(<a href=../../keywords.html#kbengine_defs.xml>kbengine_defs.xml</a>->entryScriptFile)ÖĞ¡£
+<br>×¢Òâ£º¸Ã»Øµ÷½Ó¿Ú±ØĞëÊµÏÖÔÚÈë¿ÚÄ£¿é(<a href=../../keywords.html#kbengine_defaults.xml>kbengine_defaults.xml</a>->entryScriptFile)ÖĞ¡£
 </div>
 
 <p>
@@ -1416,7 +1416,7 @@ KBEngine.globalDataÓĞ¸Ä±äµÄÊ±ºò»Øµ÷´Ëº¯Êı¡£
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
 KBEngine.globalDataÓĞÉ¾³ıµÄÊ±ºò»Øµ÷´Ëº¯Êı¡£
-<br>×¢Òâ£º¸Ã»Øµ÷½Ó¿Ú±ØĞëÊµÏÖÔÚÈë¿ÚÄ£¿é(<a href=../../keywords.html#kbengine_defs.xml>kbengine_defs.xml</a>->entryScriptFile)ÖĞ¡£
+<br>×¢Òâ£º¸Ã»Øµ÷½Ó¿Ú±ØĞëÊµÏÖÔÚÈë¿ÚÄ£¿é(<a href=../../keywords.html#kbengine_defaults.xml>kbengine_defaults.xml</a>->entryScriptFile)ÖĞ¡£
 </div>
 
 <p>
@@ -1437,7 +1437,7 @@ KBEngine.globalDataÓĞÉ¾³ıµÄÊ±ºò»Øµ÷´Ëº¯Êı¡£
 <div class="function_description">
 <b>¹¦ÄÜËµÃ÷£º</b><br><br>
 µ±ÒıÇæÆô¶¯ºó³õÊ¼»¯ÍêËùÓĞµÄ½Å±¾ºóÕâ¸ö½Ó¿Ú±»µ÷ÓÃ¡£
-<br>×¢Òâ£º¸Ã»Øµ÷½Ó¿Ú±ØĞëÊµÏÖÔÚÈë¿ÚÄ£¿é(<a href=../../keywords.html#kbengine_defs.xml>kbengine_defs.xml</a>->entryScriptFile)ÖĞ¡£
+<br>×¢Òâ£º¸Ã»Øµ÷½Ó¿Ú±ØĞëÊµÏÖÔÚÈë¿ÚÄ£¿é(<a href=../../keywords.html#kbengine_defaults.xml>kbengine_defaults.xml</a>->entryScriptFile)ÖĞ¡£
 </div>
 
 <p>
