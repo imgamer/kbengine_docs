@@ -156,7 +156,11 @@
 </td></tr>
 
 <tr><td>
-<span class="function_list">def <a href="#time" class="function_list" >time</a>(  ):</span>
+<span class="function_list">def <a href="#time" class="function_list" >time</a>( ):</span>
+</td></tr>
+
+<tr><td>
+<span class="function_list">def <a href="#verticalCollide" class="function_list" >verticalCollide</a>( spaceID, layer, position, startY, endY ):</span>
 </td></tr>
 
 </table>
@@ -1314,6 +1318,61 @@ string，字符串值。
 <table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
 <tr><td>
 uint32，当前游戏的时间，这里指周期数，周期受频率影响，频率由配置文件<a href=../../keywords.html#kbengine.xml>kbengine.xml</a>或者<a href=../../keywords.html#kbengine_defaults.xml>kbengine_defaults.xml</a>->gameUpdateHertz决定。
+</td></tr>
+</table>
+</p>
+
+
+
+<a name="verticalCollide"></a><p class="function_definition">
+<span class="function_definition">def verticalCollide( <i>spaceID, layer, position, startY, endY</i> ):</span>
+</p>
+
+<div class="function_description">
+<b>功能说明：</b><br><br>
+在指定space的指定layer中，以指定点为参照发射一条垂直射线进行碰撞，返回碰撞到的坐标点。startY为起始点相对参照点的y轴偏移，endY为结束点相对参照点的y轴偏移。
+<br><br>
+注意：space必须使用<a href=#addSpaceGeometryMapping>addSpaceGeometryMapping</a>加载过几何数据。
+<br><br>
+下面是一个例子:
+<br><br>
+
+<pre>	>>> KBEngine.verticalCollide( spaceID, entity.layer, entity.position, entity.position.y + 10, entity.position.y - 10 )
+	((0.0000, 4.0000, 0.0000), (0.0000, 0.0000, 0.0000))
+</pre>
+</div>
+
+<p>
+<span class="function_parameter">参数：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+
+<tr valign=top><td><span class="function_parameter_name"><i>spaceID</i></span></td><td><span class="function_parameter_description">
+int32, space的id。
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>layer</i></span></td><td><span class="function_parameter_description">
+int8，几何层。一个space可以同时加载多个navmesh数据，不同的navmesh在不同的layer中，不同的layer可被抽象成地面、水面等等。
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>position</i></span></td><td><span class="function_parameter_description">
+Vector3，指定参照坐标点。
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>startY</i></span></td><td><span class="function_parameter_description">
+int32，参照指定点的起始y轴偏移值。
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>endY</i></span></td><td><span class="function_parameter_description">
+int32，参照指定点的结束y轴偏移值。
+</span></td></tr>
+
+</table>
+</p>
+
+<p>
+<span class="function_return">返回：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+<tr><td>tuple，碰撞到的坐标点列表。
 </td></tr>
 </table>
 </p>
