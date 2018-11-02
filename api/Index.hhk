@@ -84,6 +84,18 @@
 		<param name="Local" value="baseapp\Classes\Proxy.html#timeSinceHeardFromClient">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="urlopen">
+		<param name="Local" value="interfaces\Modules\KBEngine.html#urlopen">
+		<param name="Name" value="KBEngine - KBEngine base 文档">
+		<param name="Local" value="baseapp\Modules\KBEngine.html#urlopen">
+		<param name="Name" value="KBEngine - KBEngine cell 文档">
+		<param name="Local" value="cellapp\Modules\KBEngine.html#urlopen">
+		<param name="Local" value="bots\Modules\KBEngine.html#urlopen">
+		<param name="Local" value="dbmgr\Modules\KBEngine.html#urlopen">
+		<param name="Local" value="logger\Modules\KBEngine.html#urlopen">
+		<param name="Local" value="loginapp\Modules\KBEngine.html#urlopen">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="databaseInterfaceName">
 		<param name="Name" value="Entity - KBEngine base 文档">
 		<param name="Local" value="baseapp\Classes\Entity.html#databaseInterfaceName">
@@ -836,6 +848,8 @@
 		<param name="Local" value="cellapp\Modules\KBEngine.html#executeRawDatabaseCommand">
 		<param name="Name" value="KBEngine - KBEngine base 文档">
 		<param name="Local" value="baseapp\Modules\KBEngine.html#executeRawDatabaseCommand">
+		<param name="Local" value="interfaces\Modules\KBEngine.html#executeRawDatabaseCommand">
+		<param name="Local" value="dbmgr\Modules\KBEngine.html#executeRawDatabaseCommand">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="getResFullPath">

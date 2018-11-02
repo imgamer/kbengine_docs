@@ -64,6 +64,18 @@
 		<param name="Local" value="baseapp/Classes/Proxy.html#clientAddr">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="urlopen">
+		<param name="Local" value="interfaces\Modules\KBEngine.html#urlopen">
+		<param name="Name" value="KBEngine - KBEngine cell">
+		<param name="Local" value="cellapp\Modules\KBEngine.html##urlopen">
+		<param name="Name" value="KBEngine - KBEngine base">
+		<param name="Local" value="baseapp\Modules\KBEngine.html##urlopen">
+		<param name="Local" value="loginapp\Modules\KBEngine.html##urlopen">
+		<param name="Local" value="logger\Modules\KBEngine.html##urlopen">
+		<param name="Local" value="dbmgr\Modules\KBEngine.html##urlopen">
+		<param name="Local" value="bots\Modules\KBEngine.html##urlopen">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="clientEnabled">
 		<param name="Name" value="Proxy - KBEngine base ÎÄµµ">
 		<param name="Local" value="baseapp/Classes/Proxy.html#clientEnabled">
@@ -834,6 +846,9 @@
 		<param name="Local" value="cellapp/Modules/KBEngine.html#executeRawDatabaseCommand">
 		<param name="Name" value="KBEngine - KBEngine base ÎÄµµ">
 		<param name="Local" value="baseapp/Modules/KBEngine.html#executeRawDatabaseCommand">
+		<param name="Name" value="KBEngine - Base Types">
+		<param name="Local" value="interfaces\Modules\KBEngine.html#executeRawDatabaseCommand">
+		<param name="Local" value="dbmgr\Modules\KBEngine.html#executeRawDatabaseCommand">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="getResFullPath">
