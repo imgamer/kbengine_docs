@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Entity - KBEngine cell</title>
 <link href="../../style.css" rel="stylesheet" type="text/css">
 </head>
@@ -60,7 +61,7 @@
 </td></tr>
 
 <tr><td>
-<span class="function_list">def <a href="#entitiesInView" class="function_list" >entitiesInView</a>( self ):</span>
+<span class="function_list">def <a href="#entitiesInView" class="function_list" >entitiesInView</a>( self, pending):</span>
 </td></tr>
 
 <tr><td>
@@ -109,6 +110,10 @@
 
 <tr><td>
 <span class="function_list">def <a href="#writeToDB" class="function_list" >writeToDB</a>( self, shouldAutoLoad, dbInterfaceName ):</span>
+</td></tr>
+
+<tr><td>
+<span class="function_list">def <a href="#getWitnesses" class="function_list" >getWitnesses</a>( self ):</span>
 </td></tr>
 
 </table>
@@ -661,7 +666,7 @@ generated.
 <table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
 
 <tr valign=top><td><span class="function_parameter_name"><i>id</i></span></td><td><span class="function_parameter_description">
-integer, which specifies the timer ID to remove.
+integer, which specifies the timer ID to remove. If the parameter is the string "All", all timers are removed at once.
 </span></td></tr>
 
 </table>
@@ -691,13 +696,24 @@ Destroys the <a href=../../keywords.html#Space>space</a> this entity is in.
 </div>
 
 <a name="entitiesInView"></a><p class="function_definition">
-<span class="function_definition">def entitiesInView( <i>self</i> ):</span>
+<span class="function_definition">def entitiesInView( <i>self, pending</i> ):</span>
 </p>
 
 <div class="function_description">
 <b>Function description:</b><br><br>
 Get a list of entities in the <a href=../../keywords.html#View>View</a> 
 scope of this entity.
+</div>
+
+<p>
+<span class="function_parameter">parameters:</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+<tr valign=top><td><span class="function_parameter_name"><i>pending</i></span></td><td><span class="function_parameter_description">
+bool, optional parameter, the default is False, only all entities visible to the client are returned, 
+otherwise all entities visible to the server but not synchronized to the client are returned.
+</span></td></tr>
+</table>
+</p>
 
 <a name="entitiesInRange"></a><p class="function_definition">
 <span class="function_definition">def entitiesInRange( <i>self, range, entityType=None, position=None</i> ):</span>
@@ -1156,6 +1172,9 @@ This function can only be used by <a href=../../keywords.html#Witness>Witness</a
 Note: You can set the default View radius by setting the <a href=../../keywords.html#kbengine.xml>kbengine.xml</a> 
 configuration option 'cellapp/defaultViewRadius'.
 <br><br>
+The View radius can't be greater than 500.0 by default. For details, please see the <a href=../../keywords.html#kbengine_defaults.xml>kbengine_defaults.xml</a> 
+configuration option 'cellapp/entity_posdir_updates'.
+<br><br>
 Data can be obtained with <a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#getViewRadius>getViewRadius</a>( ) and <a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#getViewHystArea>getViewHystArea</a>( ).
 </div>
 
@@ -1276,6 +1295,28 @@ kbengine_defaults.xml->dbmgr->databaseInterfaces.
 
 </table>
 </p>
+
+
+
+<a name="getWitnesses"></a><p class="function_definition">
+<span class="function_definition">def getWitnesses( <i>self</i> ):</span>
+</p>
+
+<div class="function_description">
+<b>Function description:</b><br><br>
+This function returns all other entities(Players) that observe this <a href=../../keywords.html#entity>Entity</a>. <br>
+<br>
+</div>
+
+<p>
+<span class="function_return">returns:</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+<tr><td>
+tuple, an array of zero or more <a href=../../keywords.html#entity>Entity</a>.
+</td></tr>
+</table>
+</p>
+
 
 
 

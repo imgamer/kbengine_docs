@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta charset="UTF-8">
 <title>KBEngine - KBEngine cell</title>
 <link href="../../style.css" rel="stylesheet" type="text/css">
 </head>
@@ -114,7 +115,7 @@ as well as the creation of <a href="../Classes/Entity.html">entities</a>.
 </td></tr>
 
 <tr><td>
-<span class="function_list">def <a href="#open" class="function_list" >open</a>( res, mode ):</span>
+<span class="function_list">def <a href="#open" class="function_list" >open</a>( res, mode, encoding ):</span>
 </td></tr>
 
 <tr><td>
@@ -192,6 +193,10 @@ as well as the creation of <a href="../Classes/Entity.html">entities</a>.
 
 <tr><td>
 <span class="function_list">def <a href="#onAllSpaceGeometryLoaded" class="function_list" >onAllSpaceGeometryLoaded</a>( spaceID, isBootstrap, mapping ):</span>
+</td></tr>
+
+<tr><td>
+<span class="function_list">def <a href="#onReadyForLogin" class="function_list" >onReadyForLogin</a>( isBootstrap ):</span>
 </td></tr>
 </table>
 
@@ -1014,7 +1019,7 @@ string, the absolute path of the resource.
 
 
 <a name="open"></a><p class="function_definition">
-<span class="function_definition">def open( <i>res, mode</i> ):</span>
+<span class="function_definition">def open( <i>res, mode, encoding</i> ):</span>
 </p>
 
 <div class="function_description">
@@ -1032,7 +1037,8 @@ string, the relative path of the resource.
 </span></td></tr>
 
 <tr valign=top><td><span class="function_parameter_name"><i>mode</i></span></td><td><span class="function_parameter_description">
-string, file operation mode:<br>
+string, optional parameter, the default is 'r', file operation mode:<br>
+r Open in only read mode,<br>
 w Open in write mode, <br>
 a Open in append mode (Start from EOF, create new file if necessary) <br>
 r+ Open <br>
@@ -1044,6 +1050,10 @@ ab Opens in binary append mode (see a) <br>
 rb+ Opens in binary read and write mode (see r+) <br>
 wb+ Opens in binary read and write mode (see w+ ) <br>
 ab+ Open in binary read/write mode (see a+)
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>encoding</i></span></td><td><span class="function_parameter_description">
+string, optional parameter, the name of the encoding used to decode or encode the file, the default encoding is platform dependent.
 </span></td></tr>
 
 </table>
@@ -1576,6 +1586,40 @@ The map value of grid collision data.
 </table>
 </p>
 
+<a name="onReadyForLogin"></a><p class="function_definition">
+<span class="function_definition">def onReadyForLogin( <i>isBootstrap</i> ):</span>
+</p>
+
+<div class="function_description">
+<b>Function description:</b><br><br>
+When the engine is started and initialized, it will always call this function 
+to ask whether the script layer is ready. If the script layer is ready, 
+loginapp allows the client to log in.
+<br>Note: This callback function must be implemented in the portal module (<a href=../../keywords.html#kbengine_defaults.xml>kbengine_defaults.xml</a>->entryScriptFile).
+</div>
+
+<p>
+<span class="function_parameter">parameters:</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+
+<tr valign=top><td><span class="function_parameter_name"><i>isBootstrap</i></span></td><td><span class="function_parameter_description">
+bool, True if this is the first <a href="../index.html">Cellapp</a> started.
+</span></td></tr>
+
+
+
+</table>
+</p>
+
+<p>
+<span class="function_return">returns:</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+<tr><td>If the return value is greater than or equal to 1.0, the script 
+layer is ready; otherwise, return a value from 0 to less than 1.0.
+</td></tr>
+</table>
+</p>
+
 
 <hr>
 <h2>Attribute documentation</h2>
@@ -1684,7 +1728,7 @@ This will cause the local access to read [1, 7, 3] and the remote [1, 2, 3]
 
 <div class="attribute_description">
 <b>Description:</b><br><br>
-This is the component that is running in the current Python environment. (So far) Possible values are 'cell', 'base', 'client', 'database', 'bot' and 'editor'.
+This is the component that is running in the current Python environment. (So far) Possible values are 'cellapp', 'baseapp', 'client', 'dbmgr', 'bots' and 'editor'.
 </div>
 
 <a name="entities"></a><p class="attribute_definition">
