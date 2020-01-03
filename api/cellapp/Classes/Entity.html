@@ -103,6 +103,11 @@
 
 <tr>
   <td>
+<span class="function_list">def <a href="#navigateOnGround" class="function_list" >navigateOnGround</a>( self, destination, velocity, distance, maxMoveDistance, maxSearchDistance, faceMovement, layer, flags, userData ):</span>
+</td></tr>
+
+<tr>
+  <td>
 <span class="function_list">def <a href="#navigatePathPoints" class="function_list" >navigatePathPoints</a>( self,  destination, maxSearchDistance, layer, flags ):</span>
 </td></tr>
 
@@ -1102,6 +1107,90 @@ int，新创建的控制器ID。
 </p>
 
 
+<a name="navigateOnGround"></a><p class="function_definition">
+<span class="function_definition">def navigateOnGround( <i>self, destination, velocity, distance, maxMoveDistance, maxSearchDistance, faceMovement, layer, flags, userData</i> ):</span>
+</p>
+
+<div class="function_description">
+<b>功能说明：</b><br><br>
+使用导航系统来使这个<a href=../../keywords.html#entity>Entity</a>向一个目标点移动，成功或失败会调用回调函数。<br>
+<a href="KBEngine.html">KBEngine</a>可以有数个预先生成好的导航网格，不同的网格大小（会导致不同的导航路径）。<br>
+任何<a href="Entity.html">实体</a>，在任意时刻只能有一个移动控制器，重复调用任何移动函数将终止之前的移动控制器。<br>
+返回一个可以用于取消这次移动的控制器ID。
+
+<br><br>例如：
+<br><a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#cancelController>cancelController</a>( movementID )。
+移动取消还可以调用<a href=../../keywords.html#entity>Entity</a>.<a href=Entity.html#cancelController>cancelController</a>( "Movement" )。当移动被取消之后通知方法将
+不被调用。
+<br><br>
+回调函数如下定义：
+
+<pre>	def onMove( self, controllerID, userData ):
+	def onMoveOver( self, controllerID, userData ):
+	def onMoveFailure( self, controllerID, userData ):
+</pre>
+</div>
+
+<p>
+<span class="function_links"><b>参看：</b></span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+<tr><td><a href=../../keywords.html#entity>Entity</a>.<a href="Entity.html#cancelController">cancelController</a><br></td></tr>
+</table>
+</p>
+
+<p>
+<span class="function_parameter">参数：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+
+<tr valign=top><td><span class="function_parameter_name"><i>destination</i></span></td><td><span class="function_parameter_description">
+Vector3，<a href=../../keywords.html#entity>Entity</a>移向的目标点。
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>velocity</i></span></td><td><span class="function_parameter_description">
+float，<a href=../../keywords.html#entity>Entity</a>的移动速度，单位m/s
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>distance</i></span></td><td><span class="function_parameter_description">
+float，距离目标小于该值停止移动，如果该值为0则移动到目标位置。
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>maxMoveDistance</i></span></td><td><span class="function_parameter_description">
+float，最大的移动距离。
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>maxSearchDistance</i></span></td><td><span class="function_parameter_description">
+float，从导航数据中最大搜索距离。
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>faceMovement</i></span></td><td><span class="function_parameter_description">
+bool，如果实体面向移动方向则为true（默认）。如果是其它机制则为false。
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>layer</i></span></td><td><span class="function_parameter_description">
+int8，使用某个层的navmesh来寻路。
+</span></td></tr>
+
+<tr valign=top>
+  <td><span class="function_parameter_name"><i>flags</i></span></td>
+  <td><span class="function_parameter_description">
+uint16，用于recastnavigation的多区域划分功能，表示可以移动的标志位（全部可以移动：0xffff）。
+</span></td></tr>
+
+<tr valign=top><td><span class="function_parameter_name"><i>userData</i></span></td><td><span class="function_parameter_description">
+object，传给通知函数的数据。
+</span></td></tr>
+
+</table>
+</p>
+
+<p>
+<span class="function_return">返回：</span>
+<table border=0 cellpadding=0 cellspacing=3 style="margin-left: 20px;">
+<tr><td>
+int，新创建的控制器ID。 
+</td></tr>
+</table>
+</p>
 
 
 <a name="navigatePathPoints"></a><p class="function_definition">
